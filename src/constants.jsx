@@ -1,0 +1,1 @@
+export const COLORS_TOP = ["#1E67C6", "#DD335C"];
