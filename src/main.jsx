@@ -5,12 +5,13 @@ import "./index.css";
 import { BrowserRouter, Routes, Route } from "react-router";
 import Hero from "./pages/Hero";
 import Content from "./pages/Content";
+import App from "./pages/App";
 
 createRoot(document.getElementById("root")).render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<Hero/>} />
-      <Route path="/content" element={<Content/>}/>
+      <Route path="/content" element={<App/>}/>
     </Routes>
   </BrowserRouter>
 );
