@@ -2,7 +2,7 @@ import React from "react";
 import CustomDiv from "../CustomDiv";
 const About = () => {
   return (
-    <div className="w-1/2 flex flex-col gap-12 py-5">
+    <div className="w-2/3 flex flex-col gap-12 py-5">
       <CustomDiv>
         <h3 className="text-2xl font-semibold text-white-800 border-b-white ">
           What is DesignTrix

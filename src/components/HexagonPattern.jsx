@@ -13,7 +13,7 @@ const Hexagon = ({ hexagon, index, hexagonSize }) => {
       setTrigger(true); // Start animation
       setTimeout(() => setTrigger(false), 500); // Reset after animation
     };
-    const randomInterval = () => Math.random() * 3000 + 4000; // Random interval between 1-4 seconds
+    const randomInterval = () => Math.random() * 4000 + 6000;    // Random interval between 6-10 seconds
 
     const loop = () => {
       playAnimationAtRandom();
