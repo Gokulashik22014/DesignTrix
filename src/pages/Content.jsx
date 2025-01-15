@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import HexagonPattern from "../components/HexagonPattern";
+import SquarePattern from "../components/SquarePattren";
 
 const Content = ({ children }) => {
   return (
@@ -11,7 +12,8 @@ const Content = ({ children }) => {
           {children}
         </div>
       </div>
-      <HexagonPattern />
+      {/* <HexagonPattern /> */}
+      <SquarePattern/>
     </>
   );
 };
