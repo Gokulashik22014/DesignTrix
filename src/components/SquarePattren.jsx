@@ -42,7 +42,7 @@ const Square = ({ hexagon, index, hexagonSize }) => {
         left: hexagon.left,
         width: `${hexagonSize.width}px`,
         height: `${hexagonSize.height}px`,
-        backgroundColor: 'black', // Random color
+        backgroundColor: "#000000", // Random color
         borderColor:COLORS_TOP[Math.floor(Math.random() * 2)],
         borderWidth:1
       }}
