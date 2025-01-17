@@ -3,6 +3,7 @@ import CustomDiv from "../components/CustomDiv";
 import About from "../components/About/About";
 import CuteAnimal from "../components/ModelComponents/CuteAnimal";
 import CrystalComponent from "../components/ModelComponents/CrystalComponent";
+import CustomBubbleText from "../components/CustomBubbleText";
 const FirstSection = () => {
   return (
     <div className="w-full">

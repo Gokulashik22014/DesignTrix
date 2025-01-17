@@ -2,13 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-.hexagon{
-    position: fixed;
-    top: -10px;
-    left: -15px;
-    right: 0;
-    bottom: 0;
-    margin: 0;
-    z-index: -10;
-    height: 100vh;
+.hexagon {
+  position: fixed;
+  top: -10px;
+  left: -15px;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  z-index: -10;
+  height: 100vh;
 }
