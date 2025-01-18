@@ -9,7 +9,7 @@ const Content = ({ children }) => {
     <>
       <div className="relative h-screen py-2 content-container">
         <Navbar />
-        <div className="mt-24 px-12 z-10">{children}</div>
+        <div className="mt-24 px-12 z-10 mb-12">{children}</div>
         {/* footer */}
         <Footer />
       </div>

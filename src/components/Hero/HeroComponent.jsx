@@ -12,6 +12,7 @@ import {
   animate,
 } from "framer-motion";
 import { useNavigate } from "react-router";
+import ShiftingCountdown from "./ShiftingCountDown";
 
 const HeroComponent = () => {
   let navigate = useNavigate();
@@ -24,9 +25,9 @@ const HeroComponent = () => {
       repeatType: "mirror",
     });
   }, []);
-  const handleOnClick=()=>{
+  const handleOnClick = () => {
     navigate("/content");
-  }
+  };
   const backgroundImage = useMotionTemplate`radial-gradient(100% 125% at 30% 0%, transparent 50%, ${color})`;
   const border = useMotionTemplate`1px solid ${color}`;
   const boxShadow = useMotionTemplate`0px 4px 24px ${color}`;
@@ -41,40 +42,47 @@ const HeroComponent = () => {
   }, []);
 
   return (
-    <div>
+    <div className="flex flex-col justify-center items-center">
       <motion.div
-        className="h-screen relative w-full z-10 px-24"
+        className="h-screen relative w-full z-10 px-24 flex justify-center items-center"
         style={{ backgroundImage }}
       >
-        <div className="text-8xl text-white relative z-10 title text-center">
+        <div className="text-8xl text-white relative z-10 title text-center flex justify-center items-center">
           <Text />
         </div>
+        <div className="flex flex-col mt-72 w-full justify-center items-center space-y-7">
+          <div className="w-full flex justify-center">
+            <ShiftingCountdown border={border} boxShadow={boxShadow}/>
+          </div>
+          <div className="">
+            <motion.button
+              style={{
+                border,
+                boxShadow,
+              }}
+              initial={{
+                opacity: 0,
+              }}
+              animate={{
+                opacity: 1,
+              }}
+              transition={{
+                duration: 10,
+              }}
+              whileHover={{
+                scale: 1.015,
+              }}
+              whileTap={{
+                scale: 0.985,
+              }}
+              className="z-20 text-gray-50 rounded-full w-64 text-bold bg-gray-950/10 px-4 py-2 transition-colors hover:bg-gray-950/50"
+              onClick={handleOnClick}
+            >
+              Explore
+            </motion.button>
+          </div>
+        </div>
       </motion.div>
-      <motion.button
-        style={{
-          border,
-          boxShadow,
-        }}
-        initial={{
-          opacity:0
-        }}
-        animate={{
-          opacity:1
-        }}
-        transition={{
-          duration:10
-        }}
-        whileHover={{
-          scale: 1.015,
-        }}
-        whileTap={{
-          scale: 0.985,
-        }}
-        className="z-10 absolute text-gray-50 bottom-1/3 left-1/2 group flex w-64 h-12 justify-center items-center gap-1.5 rounded-full bg-gray-950/10 px-4 py-2 transition-colors hover:bg-gray-950/50"
-        onClick={handleOnClick}
-      >
-        Explore 
-      </motion.button>
       <div>
         <Particles
           id="tsparticles"
