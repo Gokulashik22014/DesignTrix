@@ -3,8 +3,8 @@ import Particles from "react-particles";
 import { loadSlim } from "tsparticles-slim";
 import { loadEmittersPlugin } from "tsparticles-plugin-emitters";
 import "./style.css";
-import { COLORS_TOP } from "../../constants";
 import Text from "./Text";
+import { COLORS_TOP} from "../../constants"
 import {
   useMotionTemplate,
   useMotionValue,

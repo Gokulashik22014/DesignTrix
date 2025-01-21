@@ -44,7 +44,7 @@ const CountdownItem = ({ unit, text }) => {
   const { ref, time } = useTimer(unit);
 
   return (
-    <div className="flex h-16 w-1/4 flex-col items-center justify-center border-r-[1px] border-slate-200 font-mono md:h-16">
+    <div className="flex h-16 w-1/4 flex-col items-center justify-center border-r-[1px] border-zinc-900 font-mono md:h-16">
       <div className="relative w-full overflow-hidden text-center">
         <span ref={ref} className="block text-2xl font-medium text-white">
           {time}
