@@ -3,7 +3,7 @@ import ZapText from "./styles/ZapText";
 import { navbarLinks } from "../data";
 const Navbar = () => {
   return (
-    <div className="border border-slate-200 px-12 py-4 max-w-1/2 flex justify-center items-center rounded-lg">
+    <div className="border border-slate-200 px-12 py-4 max-w-1/2 flex justify-center items-center rounded-lg fixed">
       <ul className="uppercase flex flex-row space-x-6 text-slate-600">
         {navbarLinks.map((data,index) => (
           <ZapText key={index} text={data.name} secondaryColor={"text-white"} />
