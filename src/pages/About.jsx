@@ -14,6 +14,7 @@ import {
   useScroll,
   useTransform,
 } from "framer-motion";
+import useControlScroll from "../hooks/useControlScroll";
 const About = () => {
   const color = useMotionValue(COLORS_TOP[0]);
   const ref = useRef();
@@ -21,7 +22,7 @@ const About = () => {
     target: ref,
     offset: ["start end", "end start"],
   });
-  const opacity = useTransform(scrollYProgress, [0.3, 1], [1, 0]);
+  const opacity = useTransform(scrollYProgress, [0.3, 0], [1, 0]);
   useEffect(() => {
     animate(color, COLORS_TOP, {
       ease: "easeInOut",
@@ -52,7 +53,7 @@ const About = () => {
     >
       <motion.div
         ref={ref}
-        style={{ backgroundImage, opacity }}
+        style={{ backgroundImage }}
         className="flex flex-row space-x-4 justify-center items-center h-screen"
       >
         <div className="flex flex-col gap-6 max-h-1/2 h-1/2">
