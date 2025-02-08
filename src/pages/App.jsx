@@ -1,11 +1,14 @@
 import React from "react";
-import Content from "./Content";
-import FirstSection from "./FirstSection";
-
+import Content from "../layout/Content";
+import About from "./About";
+import AboutCollege from "./AboutCollege";
+import Images from "./Images";
 const App = () => {
   return (
     <Content>
-      <FirstSection/>
+      <About/>
+      <AboutCollege/>
+      <Images/>
     </Content>
   );
 };

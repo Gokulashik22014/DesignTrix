@@ -8,6 +8,15 @@ export default {
         secondary: "#1E67C6",
         background: "#020617",
       },
+      keyframes: {
+        shine: {
+          "0%": { "background-position": "100%" },
+          "100%": { "background-position": "-100%" },
+        },
+      },
+      animation: {
+        shine: "shine 5s linear infinite",
+      },
     },
   },
   plugins: [require("daisyui")],

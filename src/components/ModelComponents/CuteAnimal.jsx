@@ -8,7 +8,7 @@ const CuteAnimal = () => {
       <ambientLight intensity={0.5} />
       <directionalLight position={[5, 5, 5]} castShadow />
       <Animal position={[0, -1.5, 0]} rotation={[0, Math.PI / 2, 0]} />
-      <OrbitControls />
+      {/* <OrbitControls /> */}
     </Canvas>
   );
 };
