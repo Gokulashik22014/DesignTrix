@@ -8,7 +8,7 @@ const FirstSection = () => {
     <div className="w-full">
       <CustomDiv>
         <h1 className="text-5xl text-white text-center mb-4">
-          DesignTrix 2025
+         TESTING GOOFY AROUND
         </h1>
       </CustomDiv>
       <div className="w-full flex flex-row">
