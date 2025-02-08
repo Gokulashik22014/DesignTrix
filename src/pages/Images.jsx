@@ -56,3 +56,36 @@ const Images = () => {
 };
 
 export default Images;
+// import { motion, useScroll, useTransform } from "framer-motion";
+// import { useRef } from "react";
+
+// const Images = () => {
+//   const containerRef = useRef(null);
+//   const { scrollYProgress } = useScroll({
+//     target: containerRef,
+//     offset: ["start end", "end start"],
+//   });
+
+//   return (
+//     <div ref={containerRef} className="relative h-[200vh] bg-black flex flex-col items-center justify-center space-y-10">
+//       <div className="sticky top-0 flex flex-col gap-10">
+//         {[1, 2, 3, 4, 5, 6].map((index) => {
+//           const scale = useTransform(scrollYProgress, [0, 1], [1, 2]); // Scale effect as user scrolls
+
+//           return (
+//             <motion.img
+//               key={index}
+//               src={`/images/dragon_${index}.jpg`}
+//               alt={`Image ${index}`}
+//               className="w-[300px] h-[200px] object-cover rounded-lg"
+//               style={{ scale }}
+//             />
+//           );
+//         })}
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Images;
+
