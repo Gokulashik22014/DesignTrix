@@ -3,18 +3,23 @@ import { useNavigate } from "react-router";
 import Particles from "react-particles";
 import { loadSlim } from "tsparticles-slim";
 import { loadEmittersPlugin } from "tsparticles-plugin-emitters";
-import { useMotionValue, useMotionTemplate, animate, motion } from "framer-motion";
+import {
+  useMotionValue,
+  useMotionTemplate,
+  animate,
+  motion,
+} from "framer-motion";
 import Text from "./Text";
 import theme from "/song/theme.mp3";
 import { COLORS_TOP } from "../../constants";
 import ShiftingCountdown from "./ShiftingCountDown";
 import "./style.css";
-import AudioPlayer from "../AudioPLayer";
+// import AudioPlayer from "../AudioPLayer";
 
 const HeroComponent = () => {
   const navigate = useNavigate();
   const color = useMotionValue(COLORS_TOP[0]);
-
+  const audioRef=useRef()
   useEffect(() => {
 
     animate(color, COLORS_TOP, {
@@ -44,6 +49,7 @@ const HeroComponent = () => {
 
   return (
     <div className="flex flex-col justify-center items-center">
+      {/* <audio id="audio" src="/song/theme.mp3" preload="auto" ref={}/> */}
       <motion.div
         className="h-screen relative w-full z-10 px-24 flex justify-center items-center"
         style={{ backgroundImage }}
@@ -82,7 +88,6 @@ const HeroComponent = () => {
           </motion.button>
         </div>
       </motion.div>
-
       <Particles
         id="tsparticles"
         init={particlesInit}
@@ -106,9 +111,17 @@ const HeroComponent = () => {
             number: { value: 100, density: { enable: true, area: 800 } },
             color: { value: [COLORS_TOP[0], COLORS_TOP[1]] },
             shape: { type: "circle" },
-            opacity: { value: { min: 0.4, max: 0.8 }, animation: { enable: true, speed: 3, minimumValue: 0.2 } },
+            opacity: {
+              value: { min: 0.4, max: 0.8 },
+              animation: { enable: true, speed: 3, minimumValue: 0.2 },
+            },
             size: { value: { min: 2, max: 4 } },
-            move: { enable: true, speed: 3, direction: "top", outModes: { default: "bounce" } },
+            move: {
+              enable: true,
+              speed: 3,
+              direction: "top",
+              outModes: { default: "bounce" },
+            },
             stroke: { width: 0.3, color: "#ffffff" },
           },
           emitters: {
@@ -121,7 +134,7 @@ const HeroComponent = () => {
           detectRetina: true,
         }}
       />
-      <AudioPlayer/>
+      {/* <AudioPlayer /> */}
     </div>
   );
 };

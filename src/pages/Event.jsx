@@ -1,0 +1,68 @@
+import React from "react";
+import ThreeDCard from "../components/styles/ThreeDCard";
+import TrueFocus from "../components/styles/TrueFocus";
+
+const Event = () => {
+  return (
+    <div className="relative px-24 py-6">
+      <div className="relative overflow-hidden w-full h-screen px-24 py-6 flex flex-col gap-12 items-start bg-gray-900 rounded-lg">
+        {/* New Gradient Background */}
+        <div className="absolute inset-0 bg-gradient-to-r from-purple-900/50 via-teal-500/30 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-l from-purple-900/50 via-teal-500/30 to-transparent"></div>
+
+        {/* Main Content */}
+        <div className="relative z-10 w-full flex flex-col gap-12 max-h-screen h-full">
+          {/* Title Section */}
+          <div className="w-full flex">
+            <h1 className="text-5xl font-bold text-white flex space-x-3">
+              <TrueFocus sentence="Technical Coding" manualMode={true} borderColor="red" blurAmount={"4"}/>
+            </h1>
+          </div>
+
+          {/* Content Grid */}
+          <div className="w-full h-full flex gap-8">
+            {/* Left Section - About */}
+            <div className="w-1/3 flex flex-col gap-6">
+              <div className="bg-gray-800/80 text-white p-6 rounded-lg shadow-lg border border-cyan-400/20">
+                <p className="text-2xl font-bold mb-4 text-cyan-400">What?</p>
+                <p className="text-lg text-gray-300">
+                  There are many variations of passages of Lorem Ipsum
+                  available, but the majority have suffered alteration in some
+                  form, by injected humour, or randomised words which don't look
+                  even slightly believable.
+                </p>
+              </div>
+
+              {/* Image Below About */}
+              <div className="w-full rounded-lg overflow-hidden shadow-lg border border-red-400/20">
+                <img
+                  src="/temp/img1.jpg"
+                  alt="Event"
+                  className="object-cover w-full h-64 rounded-lg"
+                />
+              </div>
+            </div>
+
+            {/* Middle Section - Rules */}
+            <div className="w-1/3 h-2/3 bg-gray-800/80 text-white p-6 rounded-lg shadow-lg border border-red-400/20">
+              <p className="text-2xl font-bold mb-4 text-red-400">Rules:</p>
+              <ul className="list-disc pl-6 space-y-2 text-gray-300">
+                <li>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </li>
+                <li>Cras sodales metus ac turpis consectetur venenatis.</li>
+                <li>Integer imperdiet lorem eget rhoncus pharetra.</li>
+                <li>Morbi rutrum elit sed dapibus aliquam.</li>
+              </ul>
+            </div>
+
+            {/* Right Section - Standalone Image */}
+            <ThreeDCard/>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Event;
