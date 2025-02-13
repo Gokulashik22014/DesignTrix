@@ -22,7 +22,7 @@ const AboutCollege = () => {
     }
   }, [isInView, controls]);
   return (
-    <motion.div className="flex w-full h-screen mt-4 overflow-hidden">
+    <motion.div className="flex w-full h-screen mt-[50px] overflow-hidden">
       .{/* about data */}
       <div className="grid grid-flow-col grid-col-2 w-2/3 max-w-2/3 h-full">
         {/* about college */}
@@ -70,25 +70,25 @@ const AboutCollege = () => {
               <img src="/images/clg_logo.png" alt="" />
             </motion.div>
           </div>
-          {[0, 1, 2].map((data) => (
+          {[0, 1].map((data) => (
             <motion.div
               initial={{
                 opacity: 0,
-                translateX: "-100%",
+                translateY:"-100%"
               }}
               whileInView={{
                 opacity: 1,
-                translateX: 0,
+                translateY:0,
               }}
               transition={{
-                duration: 0.7 * (data + 1),
+                duration: 0.7,
               }}
               whileHover={{
                 scale: 1.1,
                 translateX: "5px",
               }}
               viewport={{
-                margin:"-50px"
+                margin:"100px"
               }}
               className="max-h-1/2 w-1/2 flex items-center text-justify px-4"
               key={data}
@@ -138,7 +138,7 @@ const AboutCollege = () => {
         }}
       >
         <img
-          src="/images/decor.jpg"
+          src="/temp/img6.jpg"
           alt=""
           className="object-cover max-h-full w-full"
         />
