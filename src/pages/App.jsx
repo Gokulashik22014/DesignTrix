@@ -5,6 +5,7 @@ import AboutCollege from "./AboutCollege";
 import Images from "./Images";
 import Events from "./Events";
 import Lenis from "@studio-freight/lenis/types";
+import ContactUs from "./ContactUs";
 const App = () => {
   useEffect(() => {
     const lenis = new Lenis();
@@ -22,11 +23,8 @@ const App = () => {
       <About />
       <AboutCollege />
       <Images />
-      <Events/>
-      
-      <div>
-        <h1>Contact US</h1>
-      </div>
+      <Events />
+      <ContactUs />
     </Content>
   );
 };
