@@ -108,14 +108,14 @@ const HeroComponent = () => {
           },
           particles: {
             life: { duration: 0.5 },
-            number: { value: 100, density: { enable: true, area: 800 } },
+            number: { value: 75, density: { enable: true, area: 800 } },
             color: { value: [COLORS_TOP[0], COLORS_TOP[1]] },
             shape: { type: "circle" },
             opacity: {
               value: { min: 0.4, max: 0.8 },
               animation: { enable: true, speed: 3, minimumValue: 0.2 },
             },
-            size: { value: { min: 2, max: 4 } },
+            size: { value: { min: 5, max: 8 } },
             move: {
               enable: true,
               speed: 3,
@@ -124,13 +124,13 @@ const HeroComponent = () => {
             },
             stroke: { width: 0.3, color: "#ffffff" },
           },
-          emitters: {
-            direction: "none",
-            life: { count: 2, duration: 5 },
-            rate: { quantity: 10, delay: 0.4 },
-            size: { width: 100, height: 100 },
-            position: { x: 50, y: 50 },
-          },
+          // emitters: {
+          //   direction: "none",
+          //   life: { count: 2, duration: 5 },
+          //   rate: { quantity: 10, delay: 0.4 },
+          //   size: { width: 100, height: 100 },
+          //   position: { x: 50, y: 50 },
+          // },
           detectRetina: true,
         }}
       />

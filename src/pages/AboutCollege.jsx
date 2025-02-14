@@ -22,7 +22,7 @@ const AboutCollege = () => {
     }
   }, [isInView, controls]);
   return (
-    <motion.div className="flex w-full h-screen mt-[50px] overflow-hidden">
+    <motion.div className="flex w-full h-screen mt-[50px] overflow-hidden px-24">
       .{/* about data */}
       <div className="grid grid-flow-col grid-col-2 w-2/3 max-w-2/3 h-full">
         {/* about college */}
@@ -73,12 +73,10 @@ const AboutCollege = () => {
           {[0, 1].map((data) => (
             <motion.div
               initial={{
-                opacity: 0,
-                translateY:"-100%"
+                scale: 0.9,
               }}
               whileInView={{
-                opacity: 1,
-                translateY:0,
+                scale: 1,
               }}
               transition={{
                 duration: 0.7,
@@ -88,7 +86,7 @@ const AboutCollege = () => {
                 translateX: "5px",
               }}
               viewport={{
-                margin:"100px"
+                margin:"-50px"
               }}
               className="max-h-1/2 w-1/2 flex items-center text-justify px-4"
               key={data}

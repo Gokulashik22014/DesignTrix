@@ -1,10 +1,18 @@
-import React from "react";
+import React, { useRef } from "react";
 import ThreeDCard from "../components/styles/ThreeDCard";
 import TrueFocus from "../components/styles/TrueFocus";
+import { useScroll, useTransform } from "framer-motion";
 
+import { motion } from "framer-motion";
 const Event = () => {
+  const imageRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    target: imageRef,
+    offset: ["start end", "start start"],
+  });
+  const scale = useTransform(scrollYProgress, [0, 1], [2, 1]);
   return (
-    <div className="relative px-24 py-6">
+    <div className="px-24 py-6 h-screen sticky top-0">
       <div className="relative overflow-hidden w-full h-screen px-24 py-6 flex flex-col gap-12 items-start bg-gray-900 rounded-lg">
         {/* New Gradient Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-purple-900/50 via-teal-500/30 to-transparent"></div>
@@ -15,7 +23,12 @@ const Event = () => {
           {/* Title Section */}
           <div className="w-full flex">
             <h1 className="text-5xl font-bold text-white flex space-x-3">
-              <TrueFocus sentence="Technical Coding" manualMode={true} borderColor="red" blurAmount={"4"}/>
+              <TrueFocus
+                sentence="Technical Coding"
+                manualMode={true}
+                borderColor="red"
+                blurAmount={"4"}
+              />
             </h1>
           </div>
 
@@ -34,13 +47,16 @@ const Event = () => {
               </div>
 
               {/* Image Below About */}
-              <div className="w-full rounded-lg overflow-hidden shadow-lg border border-red-400/20">
+              <motion.div
+                style={{ scale }}
+                className="w-full rounded-lg overflow-hidden shadow-lg border border-red-400/20"
+              >
                 <img
                   src="/temp/img1.jpg"
                   alt="Event"
                   className="object-cover w-full h-64 rounded-lg"
                 />
-              </div>
+              </motion.div>
             </div>
 
             {/* Middle Section - Rules */}
@@ -57,7 +73,7 @@ const Event = () => {
             </div>
 
             {/* Right Section - Standalone Image */}
-            <ThreeDCard/>
+            <ThreeDCard />
           </div>
         </div>
       </div>

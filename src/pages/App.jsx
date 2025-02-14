@@ -3,7 +3,7 @@ import Content from "../layout/Content";
 import About from "./About";
 import AboutCollege from "./AboutCollege";
 import Images from "./Images";
-import Event from "./Event";
+import Events from "./Events";
 import Lenis from "@studio-freight/lenis/types";
 const App = () => {
   useEffect(() => {
@@ -22,8 +22,11 @@ const App = () => {
       <About />
       <AboutCollege />
       <Images />
-      <Event />
-      <Event />
+      <Events/>
+      
+      <div>
+        <h1>Contact US</h1>
+      </div>
     </Content>
   );
 };

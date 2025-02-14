@@ -1,74 +1,65 @@
-import React, { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import image1 from "../../public/temp/dragon_1.jpg";
-import image2 from "../../public/temp/dragon_2.jpg";
-import image3 from "../../public/temp/dragon_3.jpg";
-import image4 from "../../public/temp/dragon_4.jpg";
-import image5 from "../../public/temp/dragon_5.jpg";
-import image6 from "../../public/temp/dragon_6.jpg";
+import Picture1 from "../../public/temp/dragon_1.jpg";
+import Picture2 from "../../public/temp/dragon_2.jpg";
+import Picture3 from "../../public/temp/dragon_3.jpg";
+import Picture4 from "../../public/temp/dragon_4.jpg";
+import Picture5 from "../../public/temp/dragon_5.jpg";
+import Picture6 from "../../public/temp/dragon_6.jpg";
+import { useScroll, useTransform, motion } from "framer-motion";
+import { useRef } from "react";
 
-const Images = () => {
+export default function Images() {
   const container = useRef(null);
-
   const { scrollYProgress } = useScroll({
     target: container,
     offset: ["start start", "end end"],
   });
-  const imageInfo = [
+
+  const scale4 = useTransform(scrollYProgress, [0, 1], [1, 2]);
+  const scale5 = useTransform(scrollYProgress, [0, 1], [1, 3]);
+  const scale6 = useTransform(scrollYProgress, [0, 1], [1, 4]);
+  const scale8 = useTransform(scrollYProgress, [0, 1], [1, 3]);
+  const scale9 = useTransform(scrollYProgress, [0, 1], [1, 2]);
+
+  const pictures = [
     {
-      image: image1,
-      scale: useTransform(scrollYProgress, [0, 1], [1, 1.5]),
-      position: { top: "0", left: "0" },
+      src: Picture1,
+      scale: scale4,
     },
     {
-      image: image2,
-      scale: useTransform(scrollYProgress, [0, 1], [1, 3]),
-      position: { top: "0", left: "0", zIndex: 100 },
+      src: Picture2,
+      scale: scale5,
     },
     {
-      image: image3,
-      scale: useTransform(scrollYProgress, [0, 1], [1, 2]),
-      position: { top: "0", right: "0" },
+      src: Picture3,
+      scale: scale6,
     },
     {
-      image: image4,
-      scale: useTransform(scrollYProgress, [0, 1], [1, 2]),
-      position: { bottom: "0", left: "0" }, // Image 4
+      src: Picture4,
+      scale: scale5,
     },
     {
-      image: image5,
-      scale: useTransform(scrollYProgress, [0, 1], [1, 2.4]),
-      position: { bottom: "0%", right: "0%" }, // Image 5
+      src: Picture5,
+      scale: scale6,
     },
     {
-      image: image6,
-      scale: useTransform(scrollYProgress, [0, 1], [1, 1.8]),
-      position: { bottom: "0", left: "0" },
+      src: Picture6,
+      scale: scale8,
     },
   ];
+
   return (
-    <div ref={container} className="relative h-[300vh] mt-[300px]">
-      <div className="sticky top-0 h-screen overflow-hidden">
-        {imageInfo.map((data, index) => (
-          <motion.div
-            style={{
-              scale: data.scale,
-              ...data.position, // Apply the position for each image
-            }}
-            className="absolute w-full h-full top-0 flex items-center justify-center "
-          >
-            <div className="h-[25vh] w-[25vw] relative">
-              <img
-                src={data.image}
-                alt={`Dragon`}
-                className="object-cover w-full h-full"
-              />
-            </div>
-          </motion.div>
-        ))}
+    <div ref={container} className="container">
+      <div className="sticky">
+        {pictures.map(({ src, scale }, index) => {
+          return (
+            <motion.div key={index} style={{ scale }} className="el">
+              <div className="imageContainer">
+                <img src={src} fill alt="image" placeholder="blur" />
+              </div>
+            </motion.div>
+          );
+        })}
       </div>
     </div>
   );
-};
-
-export default Images;
+}
