@@ -70,57 +70,8 @@ const AboutCollege = () => {
               <img src="/images/clg_logo.png" alt="" />
             </motion.div>
           </div>
-          {[0, 1].map((data) => (
-            <motion.div
-              initial={{
-                scale: 0.9,
-              }}
-              whileInView={{
-                scale: 1,
-              }}
-              transition={{
-                duration: 0.7,
-              }}
-              whileHover={{
-                scale: 1.1,
-                translateX: "5px",
-              }}
-              viewport={{
-                margin:"-50px"
-              }}
-              className="max-h-1/2 w-1/2 flex items-center text-justify px-4"
-              key={data}
-            >
-              It is a long established fact that a reader will be distracted by
-              the readable content of a page when looking at its layout. It is a
-              long established fact that a reader will be distracted by the
-              readable content of a page when looking at its layout. It is a
-              long established fact that a reader will be distracted by the
-              readable content of a page when looking at its layout.
-            </motion.div>
-          ))}
         </div>
         {/* about department */}
-        <div className="flex flex-row-reverse flex-wrap h-full w-full">
-          <div className="bg-cover h-1/2 w-1/2 flex items-center justify-center">
-            <div className="bg-cover h-32 w-32">
-              <img src="/images/clg_logo.png" alt="" />
-            </div>
-          </div>
-          {[0, 1, 2].map((data) => (
-            <div
-              className="bg-cover max-h-1/2 w-1/2 flex items-center text-justify px-4"
-              key={data}
-            >
-              It is a long established fact that a reader will be distracted by
-              the readable content of a page when looking at its layout. It is a
-              long established fact that a reader will be distracted by the
-              readable content of a page when looking at its layout. It is a
-              long established fact that a reader will be distracted by the
-              readable content of a page when looking at its layout.
-            </div>
-          ))}
-        </div>
       </div>
       {/* image */}
       <motion.div
