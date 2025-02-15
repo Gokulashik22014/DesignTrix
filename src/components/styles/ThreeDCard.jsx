@@ -1,7 +1,7 @@
 import { motion, useMotionValue, useTransform } from "framer-motion";
 import React from "react";
 
-const ThreeDCard = () => {
+const ThreeDCard = ({imgURL}) => {
   const x = useMotionValue(0);
   const y = useMotionValue(0);
 
@@ -16,7 +16,7 @@ const ThreeDCard = () => {
 
   return (
     <motion.div
-      className="relative w-80 h-full rounded-lg shadow-xl border border-cyan-400/20 bg-gray-900 p-4 cursor-pointer"
+      className="w-80 h-full rounded-lg shadow-xl border border-cyan-400/20 p-4 cursor-pointer"
       style={{
         transformStyle: "preserve-3d",
         perspective: 1000, // Ensures a proper 3D effect
@@ -62,7 +62,7 @@ const ThreeDCard = () => {
           }}
         >
           <img
-            src="/temp/img4removebg.png"
+            src={imgURL}
             alt="Technical Event"
             className="object-cover w-full h-full rounded-lg"
           />
