@@ -105,7 +105,7 @@ const ContactUs = () => {
 
       {/* Footer - Copyright */}
       <div className="mt-12 text-center text-gray-500">
-        <p>© 2023 DesignTrix. All rights reserved.</p>
+        <p>© 2025 DesignTrix. All rights reserved.</p>
       </div>
     </div>
   );

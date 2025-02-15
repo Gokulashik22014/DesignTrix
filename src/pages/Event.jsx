@@ -4,9 +4,10 @@ import TrueFocus from "../components/styles/TrueFocus";
 import { useScroll, useTransform } from "framer-motion";
 
 import { motion } from "framer-motion";
-const Event = ({progress,range}) => {
+import EventNavbar from "../components/EventNavbar";
+const Event = ({ progress, range }) => {
   const containerRef = useRef(null);
-  const { scrollYProgress,scrollY } = useScroll({
+  const { scrollYProgress, scrollY } = useScroll({
     target: containerRef,
     offset: ["start end", "start start"],
   });
@@ -14,17 +15,19 @@ const Event = ({progress,range}) => {
   const scaleMain = useTransform(progress, range, [1, 0.5]);
   return (
     <div className="px-24 mb-12 py-6 h-screen sticky top-0">
+      
       <motion.div
         style={{ scale: scaleMain }}
         viewport={{
           margin: "-100px",
         }}
         transition={{
-          duration:3,
-          ease:"easeInOut"
+          duration: 3,
+          ease: "easeInOut",
         }}
         className="relative overflow-hidden w-full h-screen px-24 py-6 flex flex-col gap-12 items-start bg-gray-900 rounded-lg"
       >
+       
         {/* New Gradient Background */}
         <div className="absolute inset-0 bg-gradient-to-r from-purple-900/50 via-teal-500/30 to-transparent"></div>
         <div className="absolute inset-0 bg-gradient-to-l from-purple-900/50 via-teal-500/30 to-transparent"></div>
@@ -89,7 +92,9 @@ const Event = ({progress,range}) => {
             </div>
 
             {/* Right Section - Standalone Image */}
-            <ThreeDCard />
+            <div className="flex justify-center py-6">
+              <ThreeDCard imgURL="/temp/img2.jpg" />
+            </div>
           </div>
         </div>
       </motion.div>
