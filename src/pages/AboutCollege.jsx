@@ -28,7 +28,10 @@ const AboutCollege = () => {
   }, [isInView, controls]);
 
   return (
-    <motion.div className="flex w-full h-screen mt-[50px] overflow-hidden justify-between pl-12 bg-[url(/temp/bgPoster.png)] bg-no-repeat bg-cover">
+    <motion.div
+      id="about"
+      className="flex w-full h-screen mt-[50px] overflow-hidden justify-between pl-12 bg-[url(/temp/poster.jpg)] bg-no-repeat bg-cover"
+    >
       <div className="flex w-full h-screen backdrop-blur-sm overflow-hidden justify-between">
         {/* Left Section (About College) */}
         <div className="w-2/3 h-full flex flex-col gap-4 justify-center">

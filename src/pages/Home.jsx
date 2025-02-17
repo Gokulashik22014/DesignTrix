@@ -15,7 +15,9 @@ import {
   useTransform,
 } from "framer-motion";
 import useControlScroll from "../hooks/useControlScroll";
-const About = () => {
+import { description } from "../data";
+
+const Home = () => {
   const color = useMotionValue(COLORS_TOP[0]);
   const ref = useRef();
   const { scrollYProgress } = useScroll({
@@ -34,6 +36,7 @@ const About = () => {
   const backgroundImage = useMotionTemplate`radial-gradient(100% 145% at 30% 0%, transparent 50%, ${color})`;
   return (
     <motion.div
+      id="home"
       style={{
         backgroundImage: "url(/images/bg.jpg)",
         height: "100vh",
@@ -65,12 +68,7 @@ const About = () => {
           </div>
           <div className="max-w-[520px]">
             <p className="text-wrap text-slate-500 pl-2 text-md">
-              Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry. Lorem Ipsum has been the industry's standard dummy text
-              ever since the 1500s, when an unknown printer took a galley of
-              type and scrambled it to make a type specimen book. It has
-              survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged.
+              {description}
             </p>
           </div>
           <div>
@@ -87,4 +85,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Home;

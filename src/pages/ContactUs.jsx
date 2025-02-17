@@ -8,7 +8,7 @@ import {
 
 const ContactUs = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white flex flex-col items-center justify-center p-6">
+    <div id="contact" className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white flex flex-col items-center justify-center p-6">
       {/* Main Container */}
       <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12">
         {/* Left Section - Logo and Contact Details */}

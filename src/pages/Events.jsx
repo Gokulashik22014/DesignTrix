@@ -9,7 +9,7 @@ const Events = () => {
     offset: ["start start", "end start"],
   });
   return (
-    <div ref={containerRef} className="mb-[10vh] ">
+    <div ref={containerRef} className="mb-[10vh] " id="events">
       {[1, 2, 3, 4, 5].map((data, index) => (
         <Event key={data} range={[index * 0.2, 1]} progress={scrollYProgress} />
       ))}

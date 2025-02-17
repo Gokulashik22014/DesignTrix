@@ -31,7 +31,7 @@ const HeroComponent = () => {
   }, [color]);
 
   const handleOnClick = () => {
-    navigate("/content");
+    navigate("/content#home");
   };
 
   const backgroundImage = useMotionTemplate`radial-gradient(100% 125% at 30% 0%, transparent 50%, ${color})`;
