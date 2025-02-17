@@ -20,6 +20,7 @@ const EventCard = ({ title, hoverText, details, rules, prize, image }) => {
           src={image} // Use the first image for the card preview
           alt={`${title} preview`}
           className="w-full h-40 object-cover"
+          
         />
         <div className="p-4">
           <h3 className="text-xl font-bold mb-2">{title}</h3>

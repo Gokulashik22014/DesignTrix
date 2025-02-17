@@ -73,6 +73,7 @@ const Event = ({ progress, range }) => {
                     src="/temp/img1.jpg"
                     alt="Event"
                     className="object-cover w-full h-64 rounded-lg"
+                    loading="lazy"
                   />
                 </motion.div>
               </div>

@@ -54,7 +54,7 @@ export default function Images() {
           return (
             <motion.div key={index} style={{ scale }} className="el">
               <div className="imageContainer">
-                <img src={src} fill alt="image" placeholder="blur" />
+                <img src={src} fill alt="image" placeholder="blur" loading="lazy"/>
               </div>
             </motion.div>
           );

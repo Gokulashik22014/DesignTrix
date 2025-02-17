@@ -65,6 +65,7 @@ const ThreeDCard = ({imgURL}) => {
             src={imgURL}
             alt="Technical Event"
             className="object-cover w-full h-full rounded-lg"
+            loading="lazy"
           />
         </motion.div>
       </motion.div>
