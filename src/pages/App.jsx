@@ -9,27 +9,29 @@ import ContactUs from "./ContactUs";
 import MouseEffect from "../components/MouseEffect";
 const App = () => {
   const [hovered,setHovered]=useState(false)
+  const handleHover=(setHovered)=>({
+    onMouseEnter: () => setHovered(true),
+    onMouseLeave: () => setHovered(false),
+  });
   useEffect(() => {
     const lenis = new Lenis();
-
     function raf(time) {
       lenis.raf(time);
 
       requestAnimationFrame(raf);
     }
-
     requestAnimationFrame(raf);
   }, []);
   return (
-    <Content>
-      <div className="fixed top-0 left-0 w-full h-full pointer-events-none">
-        <MouseEffect hovered={hovered}/>
+    <Content handleHover={handleHover(setHovered)}>
+      <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-[999]">
+        <MouseEffect hover={hovered}/>
       </div>
-      <Home />
-      <AboutCollege />
+      <Home handleHover={handleHover(setHovered)}/>
+      <AboutCollege handleHover={handleHover(setHovered)}/>
       <Images />
-      <Events />
-      <ContactUs />
+      <Events handleHover={handleHover(setHovered)}/>
+      <ContactUs handleHover={handleHover(setHovered)}/>
     </Content>
   );
 };

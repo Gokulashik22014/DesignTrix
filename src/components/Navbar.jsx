@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import ZapText from "./styles/ZapText";
 import { navbarLinks } from "../data";
 import { useLocation } from "react-router-dom";
-const Navbar = () => {
+const Navbar = ({handleHover}) => {
   const location = useLocation();
   const [selected, setSelected] = useState();
   useEffect(() => {
@@ -22,6 +22,7 @@ const Navbar = () => {
           <ZapText
             key={index}
             text={data.name}
+            handleHover={handleHover}
             secondaryColor={"text-white"}
             link={data.link}
             isSelected={data.link === selected}

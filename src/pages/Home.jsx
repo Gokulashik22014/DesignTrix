@@ -17,7 +17,7 @@ import {
 import useControlScroll from "../hooks/useControlScroll";
 import { description } from "../data";
 
-const Home = () => {
+const Home = ({ handleHover }) => {
   const color = useMotionValue(COLORS_TOP[0]);
   const ref = useRef();
   const { scrollYProgress } = useScroll({
@@ -60,7 +60,7 @@ const Home = () => {
         className="flex flex-row space-x-4 justify-center items-center h-screen"
       >
         <div className="flex flex-col gap-6 max-h-1/2 h-1/2">
-          <div>
+          <div {...handleHover}>
             <SplitText
               text="DesignTrix 2025"
               className="text-7xl font-bold text-white"
@@ -72,7 +72,10 @@ const Home = () => {
             </p>
           </div>
           <div>
-            <button className="bg-primary px-8 py-2 rounded-full text-white font-bold">
+            <button
+              {...handleHover}
+              className="bg-primary px-8 py-2 rounded-full text-white font-bold"
+            >
               Register
             </button>
           </div>

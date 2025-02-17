@@ -1,25 +1,55 @@
-import { useMouseMove, useValue, animate } from "react-ui-animate";
+import { useState, useEffect, useRef } from "react";
 
 const CURSOR_SIZE = 40;
 
-export default function MouseEffect() {
-  const x = useValue(0);
-  const y = useValue(0);
+export default function MouseEffect({ hover }) {
+  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+  const cursorRef = useRef(null);
 
-  useMouseMove(({ mouseX, mouseY }) => {
-    x.value = mouseX - CURSOR_SIZE / 2;
-    y.value = mouseY - CURSOR_SIZE / 2;
-  });
+  useEffect(() => {
+    const handleMouseMove = (event) => {
+      const { clientX, clientY } = event;
+      setCursorPosition({
+        x: clientX - CURSOR_SIZE / 2,
+        y: clientY - CURSOR_SIZE / 2,
+      });
+    };
+
+    document.addEventListener("mousemove", handleMouseMove);
+
+    return () => {
+      document.removeEventListener("mousemove", handleMouseMove);
+    };
+  }, []);
+
+  const styleWhenNotHovered = {
+    width: CURSOR_SIZE,
+    height: CURSOR_SIZE,
+    backgroundColor: "cyan",
+    borderRadius: "50%",
+    transition: "width 0.2s ease, height 0.2s ease, transform 0.1s ease",
+    opacity: 0.2,
+  };
+
+  const styleWhenHovered = {
+    width: CURSOR_SIZE*1.2,
+    height: CURSOR_SIZE*1.2,
+    backgroundColor: "cyan",
+    borderRadius:"10%",
+    transition: "width 0.2s ease, height 0.2s ease, transform 0.1s ease",
+    transform: "rotateZ(45deg)", // Correct way to apply rotation
+    opacity: 0.4,
+  };
 
   return (
-    <animate.div
+    <div
+      ref={cursorRef}
       style={{
-        width: CURSOR_SIZE,
-        height: CURSOR_SIZE,
-        backgroundColor: "red",
-        borderRadius: "50%",
-        translateX: x.value,
-        translateY: y.value,
+        position: "fixed",
+        top: cursorPosition.y,
+        left: cursorPosition.x,
+        pointerEvents: "none",
+        ...(!hover ? styleWhenNotHovered : styleWhenHovered), // Apply styles dynamically
       }}
     />
   );
