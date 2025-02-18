@@ -35,7 +35,7 @@ const ZapText = ({
           initial: { y: 0 },
         }}
       >
-        {text}
+        <Link to={`#${link}`}>{text}</Link>
       </motion.div>
       <motion.div
         {...handleHover}

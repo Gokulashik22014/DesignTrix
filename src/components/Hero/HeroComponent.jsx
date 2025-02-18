@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useCallback } from "react";
+import React, { useEffect, useRef, useCallback, useState } from "react";
 import { useNavigate } from "react-router";
 import Particles from "react-particles";
 import { loadSlim } from "tsparticles-slim";
@@ -12,16 +12,16 @@ import {
 import Text from "./Text";
 import theme from "/song/theme.mp3";
 import { COLORS_TOP } from "../../constants";
-import ShiftingCountdown from "./ShiftingCountDown";
+import ShiftingCountdown from "../ShiftingCountDown";
 import "./style.css";
+import Loading from "../Loading";
 // import AudioPlayer from "../AudioPLayer";
 
 const HeroComponent = () => {
   const navigate = useNavigate();
   const color = useMotionValue(COLORS_TOP[0]);
-  const audioRef=useRef()
+  
   useEffect(() => {
-
     animate(color, COLORS_TOP, {
       ease: "easeInOut",
       duration: 4,
@@ -33,6 +33,11 @@ const HeroComponent = () => {
   const handleOnClick = () => {
     navigate("/content#home");
   };
+  useEffect(() => {
+    if (window.innerWidth < 640) {
+      navigate("/content#home"); // Redirect to `/content` if on small screens
+    }
+  }, []);
 
   const backgroundImage = useMotionTemplate`radial-gradient(100% 125% at 30% 0%, transparent 50%, ${color})`;
   const border = useMotionTemplate`1px solid ${color}`;
@@ -46,15 +51,13 @@ const HeroComponent = () => {
   const particlesLoaded = useCallback(async (container) => {
     console.log(container);
   }, []);
-
-  return (
-    <div className="flex flex-col justify-center items-center">
+  return <div className="flex h-screen flex-col justify-center items-center">
       {/* <audio id="audio" src="/song/theme.mp3" preload="auto" ref={}/> */}
       <motion.div
         className="h-screen relative w-full z-10 px-24 flex justify-center items-center"
         style={{ backgroundImage }}
       >
-        <div className="text-8xl text-white relative z-10 title text-center flex justify-center items-center">
+        <div className="text-8xl text-white relative z-10 title text-center lg:flex lg:justify-center lg:items-center">
           <Text />
         </div>
         <div className="flex flex-col mt-72 w-full justify-center items-center space-y-7">
@@ -136,7 +139,6 @@ const HeroComponent = () => {
       />
       {/* <AudioPlayer /> */}
     </div>
-  );
 };
 
 export default HeroComponent;

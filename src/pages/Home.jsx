@@ -63,12 +63,14 @@ const Home = ({ handleHover }) => {
           <div {...handleHover}>
             <SplitText
               text="DesignTrix 2025"
-              className="text-7xl font-bold text-white"
+              className="text-4xl sm:text-2xl md:text-6xl lg:text-7xl font-bold text-white"
             />
           </div>
           <div className="max-w-[520px]">
-            <p className="text-wrap text-slate-500 pl-2 text-md">
-              {description}
+            <p className="text-wrap text-slate-500 pl-2 text-sm sm:text-md">
+              {window.innerWidth < 640
+                ? `${description.substring(0, 100)}...` // Truncate description for small screens
+                : description}
             </p>
           </div>
           <div>
@@ -80,7 +82,7 @@ const Home = ({ handleHover }) => {
             </button>
           </div>
         </div>
-        <div className="h-1/2 max-h-1/2">
+        <div className="h-1/2 max-h-1/2 max-sm:hidden">
           <CuteAnimal />
         </div>
       </motion.div>

@@ -24,7 +24,7 @@ const App = () => {
   }, []);
   return (
     <Content handleHover={handleHover(setHovered)}>
-      <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-[999]">
+      <div className="fixed top-0 left-0 w-full h-full pointer-events-none z-[999] max-sm:hidden">
         <MouseEffect hover={hovered}/>
       </div>
       <Home handleHover={handleHover(setHovered)}/>
