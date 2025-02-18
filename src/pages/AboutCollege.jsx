@@ -34,7 +34,7 @@ const AboutCollege = () => {
                 transition={{ duration: 0.8 }}
               />
             </div>
-            <h1 className="text-3xl lg:text-5xl font-bold text-[#00ffff]">
+            <h1 className="text-2xl lg:text-5xl font-bold text-[#00ffff]">
               Computer Science and Design
             </h1>
           </div>
@@ -48,11 +48,11 @@ const AboutCollege = () => {
             </div>
 
             {/* Mission Description */}
-            <div className="mt-4 space-y-3">
+            <div className="mt-4 space-y-3 text-sm lg:text-xl max-sm:text-red-500">
               {aboutCollege.description.map((data, index) => (
                 <motion.p
                   key={index}
-                  className="text-lg lg:text-xl text-gray-200 leading-relaxed"
+                  className="text-sm lg:text-xl text-gray-200 leading-relaxed"
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.2 }}
@@ -69,7 +69,7 @@ const AboutCollege = () => {
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="lg:w-1/3 flex justify-end h-full py-10"
+          className="max-sm:hidden lg:w-1/3 flex justify-center h-full"
         >
           <ThreeDCard imgURL="/temp/img6.jpg" />
         </motion.div>
