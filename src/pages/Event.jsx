@@ -4,7 +4,8 @@ import TrueFocus from "../components/styles/TrueFocus";
 import { useScroll, useTransform } from "framer-motion";
 
 import { motion } from "framer-motion";
-import EventNavbar from "../components/EventNavbar";
+// import EventNavbar from "../components/EventNavbar";
+import SpotlightCard from "../components/styles/SpotlightCard";
 const Event = ({ progress, range }) => {
   const containerRef = useRef(null);
   const { scrollYProgress, scrollY } = useScroll({
@@ -53,7 +54,8 @@ const Event = ({ progress, range }) => {
           <div className="w-full h-full flex gap-8">
             {/* Left Section - About */}
             <div className="w-1/3 flex flex-col gap-6">
-              <motion.div className="bg-gray-800/80 text-white p-6 rounded-lg shadow-lg border border-cyan-400/20">
+              <SpotlightCard className="bg-transparent text-white p-6 rounded-lg shadow-lg border-0 hover:scale-105 transition-transform duration-300 ease-in-out">
+              
                 <p className="text-2xl font-bold mb-4 text-cyan-400">What?</p>
                 <p className="text-lg text-gray-300">
                   There are many variations of passages of Lorem Ipsum
@@ -61,25 +63,28 @@ const Event = ({ progress, range }) => {
                   form, by injected humour, or randomised words which don't look
                   even slightly believable.
                 </p>
-              </motion.div>
+              
+              </SpotlightCard>
 
               {/* Image Below About */}
-              <div className="overflow-hidden relative rounded-lg">
+              <div className="overflow-hidden relative rounded-lg hover:scale-110">
                 <motion.div
                   style={{ scale }}
-                  className="w-full rounded-lg  shadow-lg border border-red-400/20"
+                  className="w-full rounded-lg  shadow-lg border border-red-400/20 hover:brightness-110 transition duration-300"
                 >
                   <img
-                    src="/temp/img1.jpg"
+                    src="/temp/PaperPresentation.jpg"
                     alt="Event"
-                    className="object-cover w-full h-64 rounded-lg"
+                    className="object-contain w-full h-64 rounded-lg"
                   />
                 </motion.div>
               </div>
             </div>
 
             {/* Middle Section - Rules */}
-            <div className="w-1/3 h-2/3 bg-gray-800/80 text-white p-6 rounded-lg shadow-lg border border-red-400/20">
+            
+            
+            <SpotlightCard className="w-1/3 h-2/3 bg-transparent text-white p-6 rounded-lg shadow-lg border-0">
               <p className="text-2xl font-bold mb-4 text-red-400">Rules:</p>
               <ul className="list-disc pl-6 space-y-2 text-gray-300">
                 <li>
@@ -89,11 +94,13 @@ const Event = ({ progress, range }) => {
                 <li>Integer imperdiet lorem eget rhoncus pharetra.</li>
                 <li>Morbi rutrum elit sed dapibus aliquam.</li>
               </ul>
-            </div>
+              </SpotlightCard>
+            
+            
 
             {/* Right Section - Standalone Image */}
             <div className="flex justify-center py-6">
-              <ThreeDCard imgURL="/temp/img2.jpg" />
+              <ThreeDCard imgURL="/temp/AIArtWar.gif" />
             </div>
           </div>
         </div>

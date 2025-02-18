@@ -80,7 +80,7 @@ const Home = ({ handleHover }) => {
             </button>
           </div>
         </div>
-        <div className="h-1/2 max-h-1/2">
+        <div className="h-1/2 max-h-1/2 max-sm:hidden">
           <CuteAnimal />
         </div>
       </motion.div>

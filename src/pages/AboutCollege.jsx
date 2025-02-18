@@ -8,10 +8,10 @@ const AboutCollege = () => {
   return (
     <div
       id="about"
-      className="h-screen relative w-full  flex items-center justify-center bg-[url(/temp/poster.jpg)] bg-no-repeat bg-cover bg-center"
+      className="h-screen relative w-full  flex items-center justify-center bg-[url(/temp/poster.jpg)] bg-no-repeat bg-contain bg-start"
     >
       {/* Glassmorphism Background Overlay */}
-      <div className="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-black/40 backdrop-blur-[3px]"></div>
 
       {/* Content Wrapper */}
       <div className="relative z-10 flex flex-wrap h-full py-16 lg:flex-nowrap items-center gap-8 px-6 lg:px-16">
@@ -69,7 +69,7 @@ const AboutCollege = () => {
           initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
-          className="lg:w-1/3 flex justify-center h-full"
+          className="lg:w-1/3 flex justify-end h-full py-10"
         >
           <ThreeDCard imgURL="/temp/img6.jpg" />
         </motion.div>
