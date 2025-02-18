@@ -19,6 +19,7 @@ const ContactUs = () => {
               src="/images/clg_logo.png" // Replace with your logo path
               alt="Logo"
               className="h-20 animate-bounce"
+              loading="lazy"
             />
           </div>
 

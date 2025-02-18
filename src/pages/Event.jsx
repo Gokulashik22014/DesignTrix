@@ -75,7 +75,7 @@ const Event = ({ progress, range }) => {
                   <img
                     src="/temp/PaperPresentation.jpg"
                     alt="Event"
-                    className="object-contain w-full h-64 rounded-lg"
+                    className="object-cover w-full h-64 rounded-lg"
                   />
                 </motion.div>
               </div>
