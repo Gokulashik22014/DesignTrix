@@ -32,7 +32,6 @@ const AboutCollege = () => {
                 initial={{ scale: 0.8, rotate: -10 }}
                 whileInView={{ scale: 1, rotate: 0 }}
                 transition={{ duration: 0.8 }}
-                loading="lazy"
               />
             </div>
             <h1 className="text-3xl lg:text-5xl font-bold text-[#00ffff]">
