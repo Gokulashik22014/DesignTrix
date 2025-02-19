@@ -8,7 +8,7 @@ const AboutCollege = () => {
   return (
     <div
       id="about"
-      className="h-screen relative w-full  flex items-center justify-center bg-[url(/temp/poster.jpg)] bg-no-repeat bg-contain bg-start"
+      className="h-screen relative w-full  flex items-center justify-center bg-[url(/images/about_bg.gif)] bg-no-repeat bg-cover bg-center"
     >
       {/* Glassmorphism Background Overlay */}
       <div className="absolute inset-0 bg-black/40 backdrop-blur-[3px]"></div>

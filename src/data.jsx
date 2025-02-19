@@ -28,7 +28,7 @@ export const aboutCollege = {
 
 export const events = [
   {
-    name: "Coding Technical",
+    name: "CipherSprint Technical",
     desc: `A thrilling multi-round coding challenge featuring code reconstruction, algorithmic problem-solving, and debugging with hidden twists for extra points!`,
     smallImg: "/temp/img3.jpg",
     bigImg: "/temp/img5.jpg",
@@ -43,19 +43,16 @@ export const events = [
     ],
   },
   {
-    name: "Coding Technical",
-    desc: `There are many variations of passages of Lorem Ipsum
-                  available, but the majority have suffered alteration in some
-                  form, by injected humour, or randomised words which don't look
-                  even slightly believable.`,
+    name: "AIArtWar Technical",
+    desc: `Participants generate AI-based art pieces on a given theme using tools like dall-e or gencraft. The best art wins.`,
     smallImg: "/temp/img3.jpg",
     bigImg: "/temp/img5.jpg",
     rules: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Participants must be individuals.",
+      "A specific theme will be announced at the start of the event.",
+      "All submissions must align with the given theme.",
+      "Participants must use the specific AI art generator which will be revealed at the event.",
+      "AI-generated images must be original creations. No direct modifications of existing artworks.",
     ],
   },
   {
@@ -75,7 +72,7 @@ export const events = [
     ],
   },
   {
-    name: "Coding Technical",
+    name: "SquidBidAuction Non-Technical",
     desc: `There are many variations of passages of Lorem Ipsum
                   available, but the majority have suffered alteration in some
                   form, by injected humour, or randomised words which don't look
@@ -83,27 +80,26 @@ export const events = [
     smallImg: "/temp/img3.jpg",
     bigImg: "/temp/img5.jpg",
     rules: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Team: 11 players (1 WK, 2 AR, 3 BAT, 3 BOWL).",
+      "Scoring: Player points + Purse balance decide the winner.",
+      "Bidding: Direct bids allowed unsold players won’t return.",
+      "Decisions: Auctioneer’s call is final. Disputes = Disqualification.",
+      "Conduct: Respect all; misconduct leads to disqualification.",
+      "Disqualification: Insufficient funds or rule violations."
     ],
   },
   {
-    name: "Coding Technical",
-    desc: `There are many variations of passages of Lorem Ipsum
-                  available, but the majority have suffered alteration in some
-                  form, by injected humour, or randomised words which don't look
-                  even slightly believable.`,
+    name: "FlickPicks Non-Technical",
+    desc: `
+Players guess the movie or song based on a sequence of images revealed over time. Early images are vague, while later ones give clearer hints. Players can guess anytime—earlier correct guesses earn more points. If no one guesses correctly, the answer is revealed.`,
     smallImg: "/temp/img3.jpg",
     bigImg: "/temp/img5.jpg",
     rules: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Team & Rounds: Teams consist of 1 to 4 members, competing in 3 rounds with a minimum of 5 questions each.",
+      "Scoring: Each correct answer earns 5 points, while every incorrect answer deducts 2 points.",
+      "Answer Format: All final answers must be given in Tamil.",
+      "Assistance: No audience support is allowed at any stage.",
+      "Results: The final results are determined solely by the organizers.",
     ],
   },
 ];
