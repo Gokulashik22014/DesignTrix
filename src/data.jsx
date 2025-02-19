@@ -38,11 +38,13 @@ export const events = [
     smallImg: "/temp/img3.jpg",
     bigImg: "/temp/img5.jpg",
     rules: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      `Round 1: Code Scramble (15 mins)
+       Rearrange and fix a scrambled code snippet, removing misleading lines for extra points.`,
+      `Round 2: Algorithm Arena (30 mins),
+      Solve 4 coding problems (1 Easy, 2 Medium, 1 Hard) with bonus challenges for extra points.`,
+      `Round 3: Debug & Hack (15 mins)
+      Debug and optimize faulty code, finding a hidden mystery bug for bonus points.`,
+      
     ],
   },
   {
