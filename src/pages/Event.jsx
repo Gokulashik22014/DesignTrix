@@ -5,7 +5,16 @@ import { useScroll, useTransform } from "framer-motion";
 import { motion } from "framer-motion";
 import SpotlightCard from "../components/styles/SpotlightCard";
 
-const Event = ({ progress, range, name, desc, smallImg, bigImg, rules,handleHover }) => {
+const Event = ({
+  progress,
+  range,
+  name,
+  desc,
+  smallImg,
+  bigImg,
+  rules,
+  handleHover,
+}) => {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -33,8 +42,8 @@ const Event = ({ progress, range, name, desc, smallImg, bigImg, rules,handleHove
           ref={containerRef}
         >
           {/* Title Section */}
-          <div className="w-full flex space-x-6 items-center">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
+          <div className="w-full flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-6 items-center text-center sm:text-left">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white">
               <TrueFocus
                 sentence={name}
                 manualMode={true}
@@ -42,7 +51,10 @@ const Event = ({ progress, range, name, desc, smallImg, bigImg, rules,handleHove
                 blurAmount={"4"}
               />
             </h1>
-            <button {...handleHover} className="btn hover:bg-black/30 text-xl border border-white shadow-md rounded-full px-6 py-2 text-white bg-gray-900/20">
+            <button
+              {...handleHover}
+              className="btn hover:bg-black/30 text-lg sm:text-xl mt-5 border border-white shadow-md rounded-full px-4 sm:px-6 py-2 text-white bg-gray-900/20"
+            >
               Register
             </button>
           </div>
@@ -57,7 +69,10 @@ const Event = ({ progress, range, name, desc, smallImg, bigImg, rules,handleHove
               </SpotlightCard>
 
               {/* Image Below About */}
-              <div {...handleHover} className="overflow-hidden relative rounded-lg hover:scale-110 transition duration-300">
+              <div
+                {...handleHover}
+                className="overflow-hidden relative rounded-lg hover:scale-110 transition duration-300"
+              >
                 <motion.div
                   style={{ scale }}
                   className="w-full rounded-lg shadow-lg border border-red-400/20 hover:brightness-110"
