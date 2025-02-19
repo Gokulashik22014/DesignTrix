@@ -34,7 +34,8 @@ export default function MouseEffect({ hover }) {
   const styleWhenHovered = {
     width: CURSOR_SIZE*1.2,
     height: CURSOR_SIZE*1.2,
-    backgroundColor: "cyan",
+    borderWidth:"3px",
+    borderColor: "cyan",
     borderRadius:"10%",
     transition: "width 0.2s ease, height 0.2s ease, transform 0.1s ease",
     transform: "rotateZ(45deg)", // Correct way to apply rotation

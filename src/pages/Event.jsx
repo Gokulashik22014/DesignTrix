@@ -5,7 +5,7 @@ import { useScroll, useTransform } from "framer-motion";
 import { motion } from "framer-motion";
 import SpotlightCard from "../components/styles/SpotlightCard";
 
-const Event = ({ progress, range, name, desc, smallImg, bigImg, rules }) => {
+const Event = ({ progress, range, name, desc, smallImg, bigImg, rules,handleHover }) => {
   const containerRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -33,7 +33,7 @@ const Event = ({ progress, range, name, desc, smallImg, bigImg, rules }) => {
           ref={containerRef}
         >
           {/* Title Section */}
-          <div className="w-full flex">
+          <div className="w-full flex space-x-6 items-center">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
               <TrueFocus
                 sentence={name}
@@ -42,6 +42,9 @@ const Event = ({ progress, range, name, desc, smallImg, bigImg, rules }) => {
                 blurAmount={"4"}
               />
             </h1>
+            <button {...handleHover} className="btn hover:bg-black/30 text-xl border border-white shadow-md rounded-full px-6 py-2 text-white bg-gray-900/20">
+              Register
+            </button>
           </div>
 
           {/* Responsive Grid Layout */}
@@ -54,7 +57,7 @@ const Event = ({ progress, range, name, desc, smallImg, bigImg, rules }) => {
               </SpotlightCard>
 
               {/* Image Below About */}
-              <div className="overflow-hidden relative rounded-lg hover:scale-110 transition duration-300">
+              <div {...handleHover} className="overflow-hidden relative rounded-lg hover:scale-110 transition duration-300">
                 <motion.div
                   style={{ scale }}
                   className="w-full rounded-lg shadow-lg border border-red-400/20 hover:brightness-110"

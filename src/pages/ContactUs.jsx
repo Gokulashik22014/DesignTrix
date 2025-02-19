@@ -1,14 +1,16 @@
 import {
   FaInstagram,
-  FaTwitter,
   FaEnvelope,
   FaPhone,
   FaMapMarkerAlt,
 } from "react-icons/fa";
 
-const ContactUs = () => {
+const ContactUs = ({ handleHover }) => {
   return (
-    <div id="contact" className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white flex flex-col items-center justify-center p-6">
+    <div
+      id="contact"
+      className="min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white flex flex-col items-center justify-center p-6"
+    >
       {/* Main Container */}
       <div className="max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12">
         {/* Left Section - Logo and Contact Details */}
@@ -40,6 +42,7 @@ const ContactUs = () => {
                 <a
                   href="mailto:hello@yourdomain.com"
                   className="text-lg font-medium hover:text-yellow-400 transition-colors"
+                  {...handleHover}
                 >
                   hello@yourdomain.com
                 </a>
@@ -50,7 +53,9 @@ const ContactUs = () => {
               <FaPhone className="text-yellow-500 text-2xl" />
               <div>
                 <p className="text-gray-400">Call Us</p>
-                <p className="text-lg font-medium">+1 (123) 456-7890</p>
+                <p className="text-lg font-medium" {...handleHover}>
+                  +1 (123) 456-7890
+                </p>
               </div>
             </div>
 
@@ -68,20 +73,13 @@ const ContactUs = () => {
           {/* Social Media Links */}
           <div className="flex space-x-6">
             <a
+              {...handleHover}
               href="https://instagram.com"
               target="_blank"
               rel="noopener noreferrer"
               className="text-pink-500 text-3xl hover:scale-110 transition-transform"
             >
               <FaInstagram />
-            </a>
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-400 text-3xl hover:scale-110 transition-transform"
-            >
-              <FaTwitter />
             </a>
           </div>
         </div>
