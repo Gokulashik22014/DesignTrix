@@ -146,3 +146,5 @@ export const prizes={
 
 "Unforgettable Rewards! – Win prizes, earn bragging rights, and make memories that last a lifetime."],
 }
+
+export const regLink="https://forms.gle/8DBPu919xZab1DeHA"

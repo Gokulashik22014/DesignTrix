@@ -15,7 +15,7 @@ import {
   useTransform,
 } from "framer-motion";
 import useControlScroll from "../hooks/useControlScroll";
-import { description } from "../data";
+import { description, regLink } from "../data";
 
 const Home = ({ handleHover }) => {
   const color = useMotionValue(COLORS_TOP[0]);
@@ -33,6 +33,9 @@ const Home = ({ handleHover }) => {
       repeatType: "mirror",
     });
   }, []);
+  const openInNewTab = (url) => {
+    window.open(url, "_blank", "noreferrer");
+  };
   const backgroundImage = useMotionTemplate`radial-gradient(100% 145% at 30% 0%, transparent 50%, ${color})`;
   return (
     <motion.div
@@ -76,7 +79,8 @@ const Home = ({ handleHover }) => {
           <div>
             <button
               {...handleHover}
-              className="bg-primary px-8 py-2 rounded-full text-white font-bold"
+              onClick={()=>openInNewTab(regLink)}
+              className="bg-primary px-8 py-2 rounded-full text-white font-bold btn hover:bg-cyan-500 transition-all  duration-300" 
             >
               Register
             </button>

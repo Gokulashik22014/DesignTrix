@@ -32,7 +32,7 @@ const App = () => {
       <AboutCollege handleHover={handleHover(setHovered)} />
       <Images />
       <Events handleHover={handleHover(setHovered)} />
-      <Notify />
+      <Notify handleHover={handleHover(setHovered)}/>
       <ContactUs handleHover={handleHover(setHovered)} />
     </Content>
   );

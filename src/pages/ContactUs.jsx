@@ -4,6 +4,7 @@ import {
   FaPhone,
   FaMapMarkerAlt,
 } from "react-icons/fa";
+import { contact } from "../data";
 
 const ContactUs = ({ handleHover }) => {
   return (
@@ -40,11 +41,11 @@ const ContactUs = ({ handleHover }) => {
               <div>
                 <p className="text-gray-400">Email Us</p>
                 <a
-                  href="mailto:hello@yourdomain.com"
+                  href={`mailto:${contact.email}`}
                   className="text-lg font-medium hover:text-yellow-400 transition-colors"
                   {...handleHover}
                 >
-                  hello@yourdomain.com
+                  {contact.email}
                 </a>
               </div>
             </div>
@@ -54,7 +55,7 @@ const ContactUs = ({ handleHover }) => {
               <div>
                 <p className="text-gray-400">Call Us</p>
                 <p className="text-lg font-medium" {...handleHover}>
-                  +1 (123) 456-7890
+                  {contact.number}
                 </p>
               </div>
             </div>
@@ -64,7 +65,7 @@ const ContactUs = ({ handleHover }) => {
               <div>
                 <p className="text-gray-400">Visit Us</p>
                 <p className="text-lg font-medium">
-                  123 Innovation Lane, Tech City, USA
+                  {contact.loc}
                 </p>
               </div>
             </div>
