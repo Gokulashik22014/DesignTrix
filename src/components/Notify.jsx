@@ -1,8 +1,10 @@
 import React from "react";
 import SpotlightCard from "./styles/SpotlightCard";
+import {rules, busRoutes, prizes} from "../data";
 const Notify = () => {
   return (
     <div className="flex flex-col sm:flex-row justify-center items-center gap-4 p-4 bg-black">
+      {/* RULES */}
       <SpotlightCard className="w-full sm:w-2/3 text-white p-4 rounded-lg shadow-lg transition-all">
         <button
           onClick={() => document.getElementById("my_modal_3").showModal()}
@@ -14,12 +16,13 @@ const Notify = () => {
             </h1>
             <div className="bg-gray-800 p-4 rounded-md shadow-md">
               <p className="text-sm sm:text-base text-gray-300 text-center">
-                Who doesn't like rules? Let us share ours!!
+                {rules.mainText}
               </p>
             </div>
           </div>
         </button>
       </SpotlightCard>
+      {/* BUS ROUTES */}
       <SpotlightCard className="w-full sm:w-2/3 text-white p-4 rounded-lg shadow-lg transition-all">
         <div className="w-full max-w-2xl mx-auto p-2 bg-cyan-900 text-white rounded-lg shadow-lg">
           <h1 className="text-2xl sm:text-3xl font-bold text-center mb-4 text-cyan-400">
@@ -27,17 +30,18 @@ const Notify = () => {
           </h1>
           <div className="bg-gray-800 p-4 rounded-md shadow-md mb-4">
             <p className="text-sm sm:text-base text-gray-300 text-center">
-              We make it easy to reach us 😇
+              {busRoutes.mainText}
             </p>
           </div>
           <a
-            href="/about"
+            href={busRoutes.link}
             className="w-full block text-center text-cyan-400 hover:underline font-bold"
           >
-            Read More
+            View Routes
           </a>
         </div>
       </SpotlightCard>
+      {/* PRIZES */}
       <SpotlightCard className="w-full sm:w-2/3 text-white p-4 rounded-lg shadow-lg transition-all">
         <button
           onClick={() => document.getElementById("my_modal_4").showModal()}
@@ -49,7 +53,7 @@ const Notify = () => {
             </h1>
             <div className="bg-gray-800 p-4 rounded-md shadow-md">
               <p className="text-sm sm:text-base text-gray-300 text-center">
-                💵Exciting prizes and more fun awaits
+                {prizes.mainText}
               </p>
             </div>
           </div>
@@ -69,15 +73,11 @@ const Notify = () => {
             </h1>
             <div className="bg-gray-900 p-4 rounded-md shadow-md mb-4">
               <ul className="list-disc list-inside text-gray-400">
-                <li>Respect all members</li>
-                <li>No spamming or self-promotion</li>
-                <li>Keep discussions constructive</li>
-                <li>Follow community guidelines</li>
-                <li>Report any violations</li>
+                {rules.description.map((data,index)=><li key={index} className="lowercase first-letter:uppercase">{data}</li>)}
               </ul>
             </div>
             <a
-              href="/rules"
+              href={rules.link}
               className="text-cyan-400 hover:underline text-center font-bold"
             >
               Read More
@@ -99,11 +99,7 @@ const Notify = () => {
             </h1>
             <div className="bg-gray-900 p-4 rounded-md shadow-md mb-4">
               <ul className="list-disc list-inside text-gray-400">
-                <li>Respect all members</li>
-                <li>No spamming or self-promotion</li>
-                <li>Keep discussions constructive</li>
-                <li>Follow community guidelines</li>
-                <li>Report any violations</li>
+                {prizes.description.map((data,index)=><li key={index}>{data}</li>)}
               </ul>
             </div>
           </div>

@@ -13,6 +13,8 @@ const Event = ({
   smallImg,
   bigImg,
   rules,
+  bgLeftGrad,
+  bgRightGrad,
   handleHover,
 }) => {
   const containerRef = useRef(null);
@@ -33,8 +35,8 @@ const Event = ({
         className="relative overflow-hidden w-full h-screen px-6 sm:px-12 py-6 flex flex-col gap-6 md:gap-12 items-start bg-gray-900 rounded-lg"
       >
         {/* New Gradient Background */}
-        <div className="absolute inset-0 bg-gradient-to-r from-orange-600/60 via-rose-500/40 to-transparent"></div>
-        <div className="absolute inset-0 bg-gradient-to-l from-orange-600/40 via-rose-500/20 to-transparent"></div>
+        <div className={`absolute inset-0 ${bgLeftGrad} `}></div>
+        <div className={`absolute inset-0 ${bgRightGrad} `}></div>
 
         {/* Main Content */}
         <div
@@ -92,7 +94,7 @@ const Event = ({
               <p className="text-2xl font-bold mb-4 text-red-400">Rules:</p>
               <ul className="list-disc pl-6 space-y-2 text-gray-300">
                 {rules.map((data, index) => (
-                  <li key={index}>{data}</li>
+                  <li key={index} className="">{data}</li>
                 ))}
               </ul>
             </SpotlightCard>
