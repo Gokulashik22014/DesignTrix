@@ -56,27 +56,21 @@ export const events = [
     ],
   },
   {
-    name: "Coding Technical",
-    desc: `There are many variations of passages of Lorem Ipsum
-                  available, but the majority have suffered alteration in some
-                  form, by injected humour, or randomised words which don't look
-                  even slightly believable.`,
+    name: "VisionaryVox Technical",
+    desc: `This event invites peers to present innovative research, disruptive concepts, and transformative technologies that drive positive change. Impress the judges with your vision, creativity, and problem-solving prowess!`,
     smallImg: "/temp/img3.jpg",
     bigImg: "/temp/img5.jpg",
     rules: [
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "Team Size: Each team can have 1 to 4 members.",
+      "Presentation Requirement: A well-structured PPT is mandatory, including Team Name, Member Details, Problem Statement, Solution, Novelty, Prototype (if available), Flowchart, and Technology Used.",
+      "Eligibility: Participants from any domain are welcome.",
+      "Registration: No on-spot registration – all teams must register in advance.",
+      "Result: Judges decisions are final",
     ],
   },
   {
     name: "SquidBidAuction Non-Technical",
-    desc: `There are many variations of passages of Lorem Ipsum
-                  available, but the majority have suffered alteration in some
-                  form, by injected humour, or randomised words which don't look
-                  even slightly believable.`,
+    desc: `Get ready for the ultimate cricketing showdown at our IPL Auction event! Test your strategy, budget management, and cricket knowledge as you bid for top players to build your dream team. Compete against rival owners, make smart picks, and create the ultimate squad. Think you have what it takes to win the auction? Let the bidding wars begin!`,
     smallImg: "/temp/img3.jpg",
     bigImg: "/temp/img5.jpg",
     rules: [
@@ -105,8 +99,8 @@ Players guess the movie or song based on a sequence of images revealed over time
 ];
 
 export const contact = {
-  email: "",
-  number: "",
+  email: "designtrix@rmkec.ac.in",
+  number: "044 6790 6710",
   loc: "R.M.K. Engineering College",
   instaLink: "",
   twitterLink: "",
