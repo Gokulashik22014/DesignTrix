@@ -30,8 +30,8 @@ export const events = [
   {
     name: "CipherSprint Technical",
     desc: `A thrilling multi-round coding challenge featuring code reconstruction, algorithmic problem-solving, and debugging with hidden twists for extra points!`,
-    smallImg: "/temp/img3.jpg",
-    bigImg: "/temp/img5.jpg",
+    bigImg: "/images/poster/coding.jpg",
+    smallImg: "/images/logo/coding.jpg",
     rules: [
       `ROUND 1: Code Scramble (15 mins)
        Rearrange and fix a scrambled code snippet, removing misleading lines for extra points.`,
@@ -46,8 +46,8 @@ export const events = [
   {
     name: "AIArtWar Technical",
     desc: `Participants generate AI-based art pieces on a given theme using tools like dall-e or gencraft. The best art wins.`,
-    smallImg: "/temp/img3.jpg",
-    bigImg: "/temp/img5.jpg",
+    smallImg: "/images/logo/artwar.png",
+    bigImg: "/images/poster/art.jpg",
     rules: [
       "Participants must be individuals.",
       "A specific theme will be announced at the start of the event.",
@@ -62,8 +62,8 @@ export const events = [
   {
     name: "VisionaryVox Technical",
     desc: `This event invites peers to present innovative research, disruptive concepts, and transformative technologies that drive positive change. Impress the judges with your vision, creativity, and problem-solving prowess!`,
-    smallImg: "/temp/img3.jpg",
-    bigImg: "/temp/img5.jpg",
+    smallImg: "/images/poster/paper.jpg",
+    bigImg: "/images/logo/paper.png",
     rules: [
       "TEAM SIZE: Each team can have 1 to 4 members.",
       "PRESENTATION REQUIREMENTS: A well-structured PPT is mandatory, including Team Name, Member Details, Problem Statement, Solution, Novelty, Prototype (if available), Flowchart, and Technology Used.",
@@ -72,13 +72,13 @@ export const events = [
       "RESULT: Judges decisions are final",
     ],
     bgLeftGrad: "bg-gradient-to-r from-green-600/60 via-teal-500/40 to-transparent",
-    bgRightGrad: "bg-gradient-to-l from-green-600/40 via-teal-500/20 to-transparent"
-
+    bgRightGrad: "bg-gradient-to-l from-green-600/40 via-teal-500/20 to-transparent",
+    imageModify:""
   },
   {
-    name: "SquidBidAuction Non-Technical",
+    name: "SquidBid Non-Technical",
     desc: `Get ready for the ultimate cricketing showdown at our IPL Auction event! Test your strategy, budget management, and cricket knowledge as you bid for top players to build your dream team. Compete against rival owners, make smart picks, and create the ultimate squad. Think you have what it takes to win the auction? Let the bidding wars begin!`,
-    smallImg: "/temp/img3.jpg",
+    smallImg: "/images/poster/ipl.png",
     bigImg: "/temp/img5.jpg",
     rules: [
       "TEAM: 11 players (1 WK, 2 AR, 3 BAT, 3 BOWL).",
@@ -97,7 +97,7 @@ export const events = [
     desc: `
 Players guess the movie or song based on a sequence of images revealed over time. Early images are vague, while later ones give clearer hints. Players can guess anytime—earlier correct guesses earn more points. If no one guesses correctly, the answer is revealed.`,
     smallImg: "/temp/img3.jpg",
-    bigImg: "/temp/img5.jpg",
+    bigImg: "/images/logo/connection.jpg",
     rules: [
       "TEAM & ROUNDS: Teams consist of 1 to 4 members, competing in 3 rounds with a minimum of 5 questions each.",
       "SCORING: Each correct answer earns 5 points, while every incorrect answer deducts 2 points.",
@@ -146,3 +146,5 @@ export const prizes={
 
 "Unforgettable Rewards! – Win prizes, earn bragging rights, and make memories that last a lifetime."],
 }
+
+export const regLink="https://forms.gle/8DBPu919xZab1DeHA"

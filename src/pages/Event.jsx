@@ -4,6 +4,7 @@ import TrueFocus from "../components/styles/TrueFocus";
 import { useScroll, useTransform } from "framer-motion";
 import { motion } from "framer-motion";
 import SpotlightCard from "../components/styles/SpotlightCard";
+import { regLink } from "../data";
 
 const Event = ({
   progress,
@@ -25,7 +26,9 @@ const Event = ({
 
   const scale = useTransform(scrollYProgress, [0, 1], [2, 1]);
   const scaleMain = useTransform(progress, range, [1, 0.5]);
-
+  const openInNewTab = (url) => {
+    window.open(url, "_blank", "noreferrer");
+  };
   return (
     <div className="px-6 sm:px-12 md:px-24 mb-12 py-6 h-screen sticky top-0">
       <motion.div
@@ -51,10 +54,12 @@ const Event = ({
                 manualMode={true}
                 borderColor="red"
                 blurAmount={"4"}
+                className=""
               />
             </h1>
             <button
               {...handleHover}
+              onClick={() => openInNewTab(regLink)}
               className="btn hover:bg-black/30 text-lg sm:text-xl mt-5 border border-white shadow-md rounded-full px-4 sm:px-6 py-2 text-white bg-gray-900/20"
             >
               Register
@@ -94,7 +99,9 @@ const Event = ({
               <p className="text-2xl font-bold mb-4 text-red-400">Rules:</p>
               <ul className="list-disc pl-6 space-y-2 text-gray-300">
                 {rules.map((data, index) => (
-                  <li key={index} className="">{data}</li>
+                  <li key={index} className="">
+                    {data}
+                  </li>
                 ))}
               </ul>
             </SpotlightCard>
