@@ -11,7 +11,7 @@ const AboutCollege = () => {
       className="h-screen relative w-full  flex items-center justify-center bg-[url(/images/about_bg.gif)] bg-no-repeat bg-cover bg-center"
     >
       {/* Glassmorphism Background Overlay */}
-      <div className="absolute inset-0 bg-black/40 backdrop-blur-sm"></div>
+      <div className="absolute inset-0 bg-black/40 backdrop-blur-[3px]"></div>
 
       {/* Content Wrapper */}
       <div className="relative z-10 flex flex-wrap h-full py-16 lg:flex-nowrap items-center gap-8 px-6 lg:px-16">
@@ -32,7 +32,6 @@ const AboutCollege = () => {
                 initial={{ scale: 0.8, rotate: -10 }}
                 whileInView={{ scale: 1, rotate: 0 }}
                 transition={{ duration: 0.8 }}
-                loading="lazy"
               />
             </div>
             <h1 className="text-2xl lg:text-5xl font-bold text-[#00ffff]">
