@@ -18,11 +18,11 @@ export const navbarLinks = [
 ];
 
 export const description =
-  "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.";
+  "The Computer Science and Design department of R.M.K. Engineering College presents Designthrix 2025, a dynamic symposium featuring five engaging events categorized into technical and non-technical competitions. This event provides students with an excellent opportunity to showcase their skills, explore innovative ideas, and engage in healthy competition. With a perfect blend of creativity and technology, Designthrix 2025 promises an exciting and enriching experience for all participants.";
 export const aboutCollege = {
   department: "Computer Science and Design",
   description: [
-    `This event is being conducted by Computer Science and Design Department of RMK Engineering College.The Department of Computer Science and Design was established in the year 2021, with Mindtree as its knowledge partner to offer an industry relevant program. professional and ethical graduates, proficient of meeting challenges in the field of Computer Science and Design through effective teaching learning process and Industry Institute interaction.`
+    `This event is being conducted by Computer Science and Design Department of RMK Engineering College.The Department of Computer Science and Design was established in the year 2021, with Mindtree as its knowledge partner to offer an industry relevant program. professional and ethical graduates, proficient of meeting challenges in the field of Computer Science and Design through effective teaching learning process and Industry Institute interaction.`,
   ],
 };
 
@@ -39,7 +39,6 @@ export const events = [
       Solve 4 coding problems (1 Easy, 2 Medium, 1 Hard) with bonus challenges for extra points.`,
       `ROUND 3: Debug & Hack (15 mins)
       Debug and optimize faulty code, finding a hidden mystery bug for bonus points.`,
-      
     ],
     bgLeftGrad:"bg-gradient-to-r from-orange-600/60 via-rose-500/40 to-transparent",
     bgRightGrad:"bg-gradient-to-l from-orange-600/40 via-rose-500/20 to-transparent",
