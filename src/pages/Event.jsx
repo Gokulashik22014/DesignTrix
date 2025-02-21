@@ -54,6 +54,7 @@ const Event = ({
                 manualMode={true}
                 borderColor="red"
                 blurAmount={"4"}
+                className=""
               />
             </h1>
             <button

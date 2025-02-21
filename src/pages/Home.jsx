@@ -1,7 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import CuteAnimal from "../components/ModelComponents/CuteAnimal";
-import CrystalComponent from "../components/ModelComponents/CrystalComponent";
-
 import SplitText from "../components/styles/SplitText";
 import ShinyText from "../components/styles/ShinyText";
 import { COLORS_TOP } from "../constants";
@@ -16,6 +14,7 @@ import {
 } from "framer-motion";
 import useControlScroll from "../hooks/useControlScroll";
 import { description, regLink } from "../data";
+import ShiftingCountdown from "../components/ShiftingCountDown";
 
 const Home = ({ handleHover }) => {
   const color = useMotionValue(COLORS_TOP[0]);
@@ -60,14 +59,15 @@ const Home = ({ handleHover }) => {
       <motion.div
         ref={ref}
         style={{ backgroundImage }}
-        className="flex flex-row space-x-4 justify-center items-center h-screen"
+        className="flex flex-row max-sm:flex-wrap space-x-4 justify-center items-center h-screen px-4"
       >
-        <div className="flex flex-col gap-6 max-h-1/2 h-1/2">
+        <div className="flex flex-col gap-6 lg:max-h-1/2 lg:h-1/2">
           <div {...handleHover}>
             <SplitText
               text="DesignTrix 2025"
-              className="text-4xl sm:text-2xl md:text-6xl lg:text-7xl font-bold text-white"
+              className="text-4xl max-sm:hidden md:text-6xl lg:text-7xl font-bold text-white"
             />
+            <h1 className="lg:hidden text-4xl text-white font-bold mt-4">DesignTrix 2025</h1>
           </div>
           <div className="max-w-[520px]">
             <p className="text-wrap text-slate-500 pl-2 text-sm sm:text-md">
@@ -79,14 +79,14 @@ const Home = ({ handleHover }) => {
           <div>
             <button
               {...handleHover}
-              onClick={()=>openInNewTab(regLink)}
-              className="bg-primary px-8 py-2 rounded-full text-white font-bold btn hover:bg-cyan-500 transition-all  duration-300" 
+              onClick={() => openInNewTab(regLink)}
+              className="bg-primary px-8 py-2 rounded-full text-white font-bold btn hover:bg-cyan-500 transition-all  duration-300"
             >
               Register
             </button>
           </div>
         </div>
-        <div className="h-1/2 max-h-1/2 max-sm:hidden">
+        <div className="h-1/2 max-h-1/2">
           <CuteAnimal />
         </div>
       </motion.div>

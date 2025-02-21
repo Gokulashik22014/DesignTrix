@@ -35,6 +35,8 @@ const Notify = ({ handleHover }) => {
           </div>
           <a
             href={busRoutes.link}
+            target="_blank"
+            rel="noopener noreferrer"
             {...handleHover}
             className="w-full block text-center text-cyan-400 hover:underline font-bold"
           >
@@ -86,6 +88,8 @@ const Notify = ({ handleHover }) => {
             </div>
             <a
               href={rules.link}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-cyan-400 hover:underline text-center font-bold"
             >
               Read More
