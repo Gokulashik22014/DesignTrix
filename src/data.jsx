@@ -77,9 +77,9 @@ export const events = [
   },
   {
     name: "SquidBid Non-Technical",
-    desc: `Get ready for the ultimate cricketing showdown at our IPL Auction event! Test your strategy, budget management, and cricket knowledge as you bid for top players to build your dream team. Compete against rival owners, make smart picks, and create the ultimate squad. Think you have what it takes to win the auction? Let the bidding wars begin!`,
+    desc: `Get ready for the ultimate cricketing showdown at our IPL Auction event! Test your strategy, budget management, and cricket knowledge as you bid for top players to build your dream team. Compete against rival owners, make smart picks, and create the ultimate squad.`,
     smallImg: "/images/poster/ipl.png",
-    bigImg: "/temp/img5.jpg",
+    bigImg: "/images/logo/ipl.jpg",
     rules: [
       "TEAM: 11 players (1 WK, 2 AR, 3 BAT, 3 BOWL).",
       "SCORING: Player points + Purse balance decide the winner.",
@@ -96,8 +96,8 @@ export const events = [
     name: "FlickPicks Non-Technical",
     desc: `
 Players guess the movie or song based on a sequence of images revealed over time. Early images are vague, while later ones give clearer hints. Players can guess anytime—earlier correct guesses earn more points. If no one guesses correctly, the answer is revealed.`,
-    smallImg: "/temp/img3.jpg",
-    bigImg: "/images/logo/connection.jpg",
+    smallImg: "/images/logo/connection.jpg",
+    bigImg: "/images/poster/connection.gif",
     rules: [
       "TEAM & ROUNDS: Teams consist of 1 to 4 members, competing in 3 rounds with a minimum of 5 questions each.",
       "SCORING: Each correct answer earns 5 points, while every incorrect answer deducts 2 points.",
