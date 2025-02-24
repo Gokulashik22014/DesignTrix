@@ -71,7 +71,7 @@ const AboutCollege = () => {
           transition={{ duration: 0.8, ease: "easeInOut" }}
           className="max-sm:hidden lg:w-1/3 flex justify-center h-full"
         >
-          <ThreeDCard imgURL="/temp/img6.jpg" />
+          <ThreeDCard imgURL="/images/logo.png" />
         </motion.div>
       </div>
     </div>
