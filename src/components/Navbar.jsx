@@ -50,7 +50,7 @@ const Navbar = ({ handleHover }) => {
         isScrolled ? " shadow-md" : "bg-transparent"
       }`}
     >
-      <ul className="uppercase flex flex-row space-x-6 text-slate-600">
+      <ul className="lg:uppercase flex flex-row space-x-9 text-slate-600">
         {navbarLinks.map((data, index) => (
           <ZapText
             key={index}

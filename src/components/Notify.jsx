@@ -1,7 +1,7 @@
 import React from "react";
 import SpotlightCard from "./styles/SpotlightCard";
-import {rules, busRoutes, prizes} from "../data";
-const Notify = () => {
+import { rules, busRoutes, prizes } from "../data";
+const Notify = ({ handleHover }) => {
   return (
     <div className="flex flex-col sm:flex-row justify-center items-center gap-4 p-4 bg-black">
       {/* RULES */}
@@ -35,6 +35,9 @@ const Notify = () => {
           </div>
           <a
             href={busRoutes.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            {...handleHover}
             className="w-full block text-center text-cyan-400 hover:underline font-bold"
           >
             View Routes
@@ -73,11 +76,20 @@ const Notify = () => {
             </h1>
             <div className="bg-gray-900 p-4 rounded-md shadow-md mb-4">
               <ul className="list-disc list-inside text-gray-400">
-                {rules.description.map((data,index)=><li key={index} className="lowercase first-letter:uppercase">{data}</li>)}
+                {rules.description.map((data, index) => (
+                  <li
+                    key={index}
+                    className="lowercase first-letter:uppercase  text-white mt-3 py-2 "
+                  >
+                    {data}
+                  </li>
+                ))}
               </ul>
             </div>
             <a
               href={rules.link}
+              target="_blank"
+              rel="noopener noreferrer"
               className="text-cyan-400 hover:underline text-center font-bold"
             >
               Read More
@@ -99,7 +111,14 @@ const Notify = () => {
             </h1>
             <div className="bg-gray-900 p-4 rounded-md shadow-md mb-4">
               <ul className="list-disc list-inside text-gray-400">
-                {prizes.description.map((data,index)=><li key={index}>{data}</li>)}
+                {prizes.description.map((data, index) => (
+                  <li
+                    key={index}
+                    className="lowercase first-letter:uppercase text-white mt-3 py-2"
+                  >
+                    {data}
+                  </li>
+                ))}
               </ul>
             </div>
           </div>

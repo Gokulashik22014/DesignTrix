@@ -4,7 +4,7 @@ import {
   FaPhone,
   FaMapMarkerAlt,
 } from "react-icons/fa";
-import {contact} from "../data";
+import { contact } from "../data";
 
 const ContactUs = ({ handleHover }) => {
   return (

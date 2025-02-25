@@ -1,9 +1,11 @@
-import Picture1 from "../../public/temp/dragon_1.jpg";
-import Picture2 from "../../public/temp/dragon_2.jpg";
-import Picture3 from "../../public/temp/dragon_3.jpg";
-import Picture4 from "../../public/temp/dragon_4.jpg";
-import Picture5 from "../../public/temp/dragon_5.jpg";
-import Picture6 from "../../public/temp/dragon_6.jpg";
+import Picture1 from "../../public/images/collage/sym_poster.jpg";
+import Picture2 from "../../public/images/collage/img2.jpg";
+import Picture3 from "../../public/images/collage/img3.jpg";
+import Picture4 from "../../public/images/collage/img4.jpg";
+import Picture5 from "../../public/images/collage/img5.jpg";
+import Picture6 from "../../public/images/collage/img6.jpg";
+import Picture7 from "../../public/images/collage/img1.jpg";
+
 import { useScroll, useTransform, motion } from "framer-motion";
 import { useRef } from "react";
 
@@ -45,10 +47,14 @@ export default function Images() {
       src: Picture6,
       scale: scale8,
     },
+    {
+      src: Picture7,
+      scale: scale9,
+    },
   ];
 
   return (
-    <div ref={container} className="container">
+    <div ref={container} className="container max-sm:hidden">
       <div className="sticky">
         {pictures.map(({ src, scale }, index) => {
           return (
