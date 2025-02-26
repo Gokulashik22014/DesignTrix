@@ -54,7 +54,7 @@ export default function Images() {
   ];
 
   return (
-    <div ref={container} className="container">
+    <div ref={container} className="container max-sm:hidden">
       <div className="sticky">
         {pictures.map(({ src, scale }, index) => {
           return (

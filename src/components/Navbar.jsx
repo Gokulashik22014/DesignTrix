@@ -46,7 +46,7 @@ const Navbar = ({ handleHover }) => {
 
   return (
     <div
-      className={`border px-12 py-4 max-w-1/2 flex justify-center items-center rounded-lg fixed z-50 transition-all duration-300 ${
+      className={`border-2 border-white/20 shadow-lg shadow-cyan-500/30 px-4 py-4 max-w-1/2 flex justify-center items-center rounded-lg fixed z-50 transition-all duration-300 ${
         isScrolled ? " shadow-md" : "bg-transparent"
       }`}
     >

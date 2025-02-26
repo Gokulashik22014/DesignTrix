@@ -30,7 +30,7 @@ const ContactUs = ({ handleHover }) => {
             Let's Connect
           </h1>
           <p className="text-gray-400 text-lg">
-            Have a question or want to collaborate? Feel free to reach out to
+            Have any question? Feel free to reach out to
             us. We're here to help!
           </p>
 
