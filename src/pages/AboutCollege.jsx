@@ -52,7 +52,7 @@ const AboutCollege = () => {
               {aboutCollege.description.map((data, index) => (
                 <motion.p
                   key={index}
-                  className="text-sm lg:text-xl text-gray-200 leading-relaxed"
+                  className="text-sm lg:text-xl text-gray-200 leading-relaxed text-justify"
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.2 }}

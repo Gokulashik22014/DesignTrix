@@ -71,8 +71,8 @@ const Home = ({ handleHover }) => {
             />
             <h1 className="lg:hidden text-4xl text-white font-bold mt-4">DesignTrix 2025</h1>
           </div>
-          <div className="max-w-[520px]">
-            <p className="text-wrap text-slate-500 pl-2 text-sm sm:text-md">
+          <div className="max-w-[520px] text-justif">
+            <p className="text-wrap text-slate-300 pl-2 text-sm sm:text-md">
               {window.innerWidth < 640
                 ? `${description.substring(0, 100)}...` // Truncate description for small screens
                 : description}
