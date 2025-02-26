@@ -18,6 +18,8 @@ import ShiftingCountdown from "../components/ShiftingCountDown";
 
 const Home = ({ handleHover }) => {
   const color = useMotionValue(COLORS_TOP[0]);
+  const border = useMotionTemplate`1px solid ${color}`;
+  const boxShadow = useMotionTemplate`0px 4px 24px ${color}`;
   const ref = useRef();
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -76,7 +78,7 @@ const Home = ({ handleHover }) => {
                 : description}
             </p>
           </div>
-          <div>
+          <div className="hidden sm:flex">
             <button
               {...handleHover}
               onClick={() => openInNewTab(regLink)}
@@ -86,8 +88,20 @@ const Home = ({ handleHover }) => {
             </button>
           </div>
         </div>
-        <div className="h-1/2 max-h-1/2">
+        <div className="hidden sm:flex h-1/2 max-h-1/2">
           <CuteAnimal />
+        </div>
+        <div className="flex flex-col sm:hidden w-full pr-5 justify-center">
+            <ShiftingCountdown border={border} boxShadow={boxShadow} />
+            <div className="flex justify-center py-3">
+            <button
+              {...handleHover}
+              onClick={() => openInNewTab(regLink)}
+              className="bg-primary w-2/3  py-2 rounded-full text-white font-bold btn hover:bg-cyan-500 transition-all  duration-300"
+            >
+              Register
+            </button>
+            </div>
         </div>
       </motion.div>
     </motion.div>
