@@ -72,12 +72,22 @@ const Home = ({ handleHover }) => {
             <h1 className="lg:hidden text-4xl text-white font-bold mt-4">DesignTrix 2025</h1>
           </div>
           <div className="max-w-[520px]">
-            <p className="text-wrap text-slate-500 pl-2 text-sm sm:text-md">
-              {window.innerWidth < 640
-                ? `${description.substring(0, 100)}...` // Truncate description for small screens
-                : description}
-            </p>
-          </div>
+          <p className="text-wrap text-gray-300 pl-2 text-sm sm:text-md">
+            {/* Check for window width and conditionally display intro */}
+            {window.innerWidth < 640 ? (
+              <>
+                <span className="font-bold text-lg text-white">{description.intro}</span>
+                <span>{description.content.substring(0, 100)}...</span>
+              </>
+            ) : (
+              <>
+                <span className="font-bold text-lg text-white">{description.intro}</span>
+                <span>{description.content}</span>
+              </>
+            )}
+          </p>
+        </div>
+
           <div className="hidden sm:flex">
             <button
               {...handleHover}
