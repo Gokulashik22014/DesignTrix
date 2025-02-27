@@ -38,6 +38,7 @@ const Home = ({ handleHover }) => {
     window.open(url, "_blank", "noreferrer");
   };
   const backgroundImage = useMotionTemplate`radial-gradient(100% 145% at 30% 0%, transparent 50%, ${color})`;
+  const textColor = useMotionTemplate`${color}`;
   return (
     <motion.div
       id="home"
@@ -61,50 +62,65 @@ const Home = ({ handleHover }) => {
       <motion.div
         ref={ref}
         style={{ backgroundImage }}
-        className="flex flex-row max-sm:flex-wrap space-x-4 justify-center items-center h-screen px-4"
+        className="flex flex-col max-sm:flex-wrap items-center h-screen px-4 pt-16"
       >
-        <div className="flex flex-col gap-6 lg:max-h-1/2 lg:h-1/2">
-          <div {...handleHover}>
-            <SplitText
-              text="DesignTrix 2025"
-              className="text-4xl max-sm:hidden md:text-6xl lg:text-7xl font-bold text-white"
-            />
-            <h1 className="lg:hidden text-4xl text-white font-bold mt-4">
-              DesignTrix 2025
-            </h1>
+        <div className="flex flex-row w-1/2 justify-start items-center max-sm:hidden">
+          <div className="w-24 h-24 object-cover">
+            <img src="/images/clg_logo.png" alt="" srcset="" />
           </div>
-          <div className="max-w-[520px]">
-            <p className="text-wrap text-gray-300 pl-2 text-sm sm:text-md">
-              {/* Check for window width and conditionally display intro */}
-              <span className="font-bold text-lg text-white">
-                {description.intro}
-              </span>
-              <span>{description.content}</span>
-            </p>
-          </div>
-          <div className="hidden sm:flex">
-            <button
-              {...handleHover}
-              onClick={() => openInNewTab(regLink)}
-              className="bg-primary px-8 py-2 rounded-full text-white font-bold btn hover:bg-cyan-500 transition-all  duration-300"
-            >
-              Register
-            </button>
-          </div>
+          <motion.h1
+            style={{ color: textColor }}
+            className="text-5xl font-extrabold"
+          >
+            R.M.K. Engineering College
+          </motion.h1>
         </div>
-        <div className="hidden sm:flex h-1/2 max-h-1/2">
-          <CuteAnimal />
-        </div>
-        <div className="flex flex-col sm:hidden w-full pr-5 justify-center">
-          <ShiftingCountdown border={border} boxShadow={boxShadow} />
-          <div className="flex justify-center py-3">
-            <button
-              {...handleHover}
-              onClick={() => openInNewTab(regLink)}
-              className="bg-primary w-2/3  py-2 rounded-full text-white font-bold btn hover:bg-cyan-500 transition-all  duration-300"
-            >
-              Register
-            </button>
+        <div className="flex flex-row max-sm:flex-wrap space-x-4 justify-around items-center h-screen">
+          <div className="flex flex-col gap-6 lg:max-h-1/2 lg:h-1/2">
+            <div {...handleHover}>
+              <SplitText
+                text="DesignTrix 2025"
+                className="text-4xl max-sm:hidden md:text-6xl lg:text-7xl font-bold text-white"
+              />
+              <h1 className="lg:hidden text-4xl text-white font-bold mt-4">
+                DesignTrix 2025
+              </h1>
+            </div>
+            <div className="max-w-[520px]">
+              <p className="text-wrap text-gray-300 pl-2 text-sm sm:text-md text-justify">
+                {/* Check for window width and conditionally display intro */}
+                <span className="text-lg text-white">
+                  {description.intro}
+                </span>
+                <span className="text-justify w-full">
+                  {description.content}
+                </span>
+              </p>
+            </div>
+            <div className="hidden sm:flex">
+              <button
+                {...handleHover}
+                onClick={() => openInNewTab(regLink)}
+                className="bg-primary px-8 py-2 rounded-full text-white font-bold btn hover:bg-cyan-500 transition-all  duration-300"
+              >
+                Register
+              </button>
+            </div>
+          </div>
+          <div className="hidden sm:flex h-1/2 max-h-1/2">
+            <CuteAnimal />
+          </div>
+          <div className="flex flex-col sm:hidden w-full pr-5 justify-center">
+            <ShiftingCountdown border={border} boxShadow={boxShadow} />
+            <div className="flex justify-center py-3">
+              <button
+                {...handleHover}
+                onClick={() => openInNewTab(regLink)}
+                className="bg-primary w-2/3  py-2 rounded-full text-white font-bold btn hover:bg-cyan-500 transition-all  duration-300"
+              >
+                Register
+              </button>
+            </div>
           </div>
         </div>
       </motion.div>

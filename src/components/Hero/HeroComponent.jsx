@@ -20,7 +20,7 @@ import Loading from "../Loading";
 const HeroComponent = () => {
   const navigate = useNavigate();
   const color = useMotionValue(COLORS_TOP[0]);
-  
+
   useEffect(() => {
     animate(color, COLORS_TOP, {
       ease: "easeInOut",
@@ -42,7 +42,7 @@ const HeroComponent = () => {
   const backgroundImage = useMotionTemplate`radial-gradient(100% 125% at 30% 0%, transparent 50%, ${color})`;
   const border = useMotionTemplate`1px solid ${color}`;
   const boxShadow = useMotionTemplate`0px 4px 24px ${color}`;
-
+  const textColor=useMotionTemplate`${color}`
   const particlesInit = useCallback(async (engine) => {
     await loadSlim(engine);
     await loadEmittersPlugin(engine); // Load the emitters plugin
@@ -51,46 +51,55 @@ const HeroComponent = () => {
   const particlesLoaded = useCallback(async (container) => {
     console.log(container);
   }, []);
-  return <div className="flex h-screen flex-col justify-center items-center">
+  return (
+    <div className="flex h-screen w-full flex-col justify-center items-center">
       {/* <audio id="audio" src="/song/theme.mp3" preload="auto" ref={}/> */}
-      <motion.div
-        className="h-screen relative w-full z-10 px-24 flex justify-center items-center"
-        style={{ backgroundImage }}
-      >
-        <div className="text-8xl text-white relative z-10 title text-center lg:flex lg:justify-center lg:items-center">
-          <Text />
+      <div className="flex flex-row w-1/2 justify-around items-center z-10 absolute top-10">
+        <div className="w-24 h-24 object-cover">
+          <img src="/images/clg_logo.png" alt="" srcset="" />
         </div>
-        <div className="flex flex-col mt-72 w-full justify-center items-center space-y-7">
-          <div className="w-full flex justify-center">
-            <ShiftingCountdown border={border} boxShadow={boxShadow} />
+        <motion.h1 style={{color:textColor}} className="text-5xl font-extrabold">R.M.K. Engineering College</motion.h1>
+      </div>
+      <div className="flex h-screen w-full flex-col justify-center items-center">
+        <motion.div
+          className="h-screen relative w-full z-10 px-24 flex justify-center items-center"
+          style={{ backgroundImage }}
+        >
+          <div className="text-8xl text-white relative z-10 title text-center lg:flex lg:justify-center lg:items-center">
+            <Text />
           </div>
-          <motion.button
-            style={{
-              border,
-              boxShadow,
-            }}
-            initial={{
-              opacity: 0,
-            }}
-            animate={{
-              opacity: 1,
-            }}
-            transition={{
-              duration: 10,
-            }}
-            whileHover={{
-              scale: 1.015,
-            }}
-            whileTap={{
-              scale: 0.985,
-            }}
-            className="z-20 text-gray-50 rounded-full w-64 text-bold bg-gray-950/10 px-4 py-2 transition-colors hover:bg-gray-950/50"
-            onClick={handleOnClick}
-          >
-            Explore
-          </motion.button>
-        </div>
-      </motion.div>
+          <div className="flex flex-col mt-72 w-full justify-center items-center space-y-7">
+            <div className="w-full flex justify-center">
+              <ShiftingCountdown border={border} boxShadow={boxShadow} />
+            </div>
+            <motion.button
+              style={{
+                border,
+                boxShadow,
+              }}
+              initial={{
+                opacity: 0,
+              }}
+              animate={{
+                opacity: 1,
+              }}
+              transition={{
+                duration: 10,
+              }}
+              whileHover={{
+                scale: 1.015,
+              }}
+              whileTap={{
+                scale: 0.985,
+              }}
+              className="z-20 text-gray-50 rounded-full w-64 text-bold bg-gray-950/10 px-4 py-2 transition-colors hover:bg-gray-950/50"
+              onClick={handleOnClick}
+            >
+              Explore
+            </motion.button>
+          </div>
+        </motion.div>
+      </div>
       <Particles
         id="tsparticles"
         init={particlesInit}
@@ -139,6 +148,7 @@ const HeroComponent = () => {
       />
       {/* <AudioPlayer /> */}
     </div>
+  );
 };
 
 export default HeroComponent;
