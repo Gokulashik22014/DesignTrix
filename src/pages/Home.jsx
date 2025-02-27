@@ -69,32 +69,19 @@ const Home = ({ handleHover }) => {
               text="DesignTrix 2025"
               className="text-4xl max-sm:hidden md:text-6xl lg:text-7xl font-bold text-white"
             />
-            <h1 className="lg:hidden text-4xl text-white font-bold mt-4">DesignTrix 2025</h1>
+            <h1 className="lg:hidden text-4xl text-white font-bold mt-4">
+              DesignTrix 2025
+            </h1>
           </div>
           <div className="max-w-[520px]">
-          <p className="text-wrap text-gray-300 pl-2 text-sm sm:text-md">
-            {/* Check for window width and conditionally display intro */}
-            {window.innerWidth < 640 ? (
-              <>
-                <span className="font-bold text-lg text-white">{description.intro}</span>
-                <span>{description.content.substring(0, 100)}...</span>
-              </>
-            ) : (
-              <>
-                <span className="font-bold text-lg text-white">{description.intro}</span>
-                <span>{description.content}</span>
-              </>
-            )}
-          </p>
-        </div>
-          <div className="max-w-[520px] text-justif">
-            <p className="text-wrap text-slate-300 pl-2 text-sm sm:text-md">
-              {window.innerWidth < 640
-                ? `${description.substring(0, 100)}...` // Truncate description for small screens
-                : description}
+            <p className="text-wrap text-gray-300 pl-2 text-sm sm:text-md">
+              {/* Check for window width and conditionally display intro */}
+              <span className="font-bold text-lg text-white">
+                {description.intro}
+              </span>
+              <span>{description.content}</span>
             </p>
           </div>
-
           <div className="hidden sm:flex">
             <button
               {...handleHover}
@@ -109,8 +96,8 @@ const Home = ({ handleHover }) => {
           <CuteAnimal />
         </div>
         <div className="flex flex-col sm:hidden w-full pr-5 justify-center">
-            <ShiftingCountdown border={border} boxShadow={boxShadow} />
-            <div className="flex justify-center py-3">
+          <ShiftingCountdown border={border} boxShadow={boxShadow} />
+          <div className="flex justify-center py-3">
             <button
               {...handleHover}
               onClick={() => openInNewTab(regLink)}
@@ -118,7 +105,7 @@ const Home = ({ handleHover }) => {
             >
               Register
             </button>
-            </div>
+          </div>
         </div>
       </motion.div>
     </motion.div>
