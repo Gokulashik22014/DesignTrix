@@ -72,7 +72,7 @@ const Event = ({
             <div className="lg:flex lg:flex-col gap-6 sm:hidden max-sm:hidden">
               <SpotlightCard className="bg-transparent text-white p-6 rounded-lg shadow-lg border-0 hover:scale-105 transition-transform duration-300 ease-in-out">
                 <p className="text-2xl font-bold mb-4 text-cyan-400">What?</p>
-                <p className="text-lg text-gray-300 text-justify">{desc}</p>
+                <p className="text-lg text-gray-300">{desc}</p>
               </SpotlightCard>
 
               {/* Image Below About */}
@@ -97,7 +97,7 @@ const Event = ({
             {/* Middle Section - Rules */}
             <SpotlightCard className="h-auto bg-transparent text-white p-6 rounded-lg shadow-lg border-0 hover:scale-105 transition-transform duration-300">
               <p className="text-2xl font-bold mb-4 text-red-400">Rules:</p>
-              <ul className="list-disc pl-6 space-y-2 text-gray-300 break-words text-justify">
+              <ul className="list-disc pl-6 space-y-2 text-gray-300 break-words">
                 {rules.map((data, index) => (
                   <li key={index} className="">
                     {data}
