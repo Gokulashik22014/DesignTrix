@@ -17,8 +17,10 @@ export const navbarLinks = [
   },
 ];
 
-export const description =
-  "The Computer Science and Design department of R.M.K. Engineering College presents Designthrix 2025, a dynamic symposium featuring five engaging events categorized into technical and non-technical competitions. This event provides students with an excellent opportunity to showcase their skills, explore innovative ideas, and engage in healthy competition. With a perfect blend of creativity and technology, Designthrix 2025 promises an exciting and enriching experience for all participants.";
+export const description ={
+  intro:"The Department of Computer Science and Design of R.M.K. Engineering College proudly presents ",
+  content:"Designtrix 2025, a National Level Symposium featuring five engaging events categorized into technical and non-technical competitions. This event provides students with an excellent opportunity to showcase their skills, explore innovative ideas, and engage in healthy competition. With a perfect blend of creativity and technology, Designtrix 2025 promises an exciting and enriching experience for all participants."
+};
 export const aboutCollege = {
   department: "Computer Science and Design",
   description: [
@@ -69,15 +71,15 @@ export const events = [
   },
   {
     name: "VisionaryVox Technical",
-    desc: `This event invites peers to present innovative research, disruptive concepts, and transformative technologies that drive positive change. Impress the judges with your vision, creativity, and problem-solving prowess!`,
-    smallImg: "/images/poster/paper.jpg",
-    bigImg: "/images/logo/paper.png",
+    desc: `Step into the spotlight and present your groundbreaking ideas in a high-impact 5-minute talk, followed by a dynamic 2-minute Q&A! This is your chance to challenge conventions, spark discussions, and showcase your innovative thinking. Engage with like-minded minds, defend your ideas, and leave a lasting impression! `,
+    smallImg: "/images/logo/paper.png",
+    bigImg: "/images/poster/paper.jpg",
     rules: [
-      "TEAM SIZE: Each team can have 1 to 4 members.",
-      "PRESENTATION REQUIREMENTS: A well-structured PPT is mandatory, including Team Name, Member Details, Problem Statement, Solution, Novelty, Prototype (if available), Flowchart, and Technology Used.",
-      "ELIGIBILITY: Participants from any domain are welcome.",
-      "REGISTRATION: No on-spot registration – all teams must register in advance.",
-      "RESULT: Judges decisions are final",
+      "1 to 3 members per team can participate.",
+      "Only Team leader can register with the Team name, Team members, Title and Abstract.",
+      "The PPT must contain the following content: Title, Team members, Problem Statement, Solution, Novelty, Technical Stack, Work Flow and Prototype.",
+      "Each team can present for about 5 mins and Q&A session will be conducted for 2 mins.",
+      "Registration must be done before the deadline and on-spot registration is not available.",
     ],
     bgLeftGrad:
       "bg-gradient-to-r from-green-600/60 via-teal-500/40 to-transparent",
