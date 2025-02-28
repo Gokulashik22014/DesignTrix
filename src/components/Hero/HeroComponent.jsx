@@ -52,7 +52,7 @@ const HeroComponent = () => {
     console.log(container);
   }, []);
   return (
-    <div className="flex h-screen w-full flex-col items-center" >
+    <div className="flex h-screen w-full flex-col items-center bg-[url(/images/about_bg.gif)]" >
       {/* <audio id="audio" src="/song/theme.mp3" preload="auto" ref={}/> */}
       <div className="flex items-center absolute z-10 top-20">
         <div className="w-24 h-24 object-cover">
@@ -117,7 +117,7 @@ const HeroComponent = () => {
         init={particlesInit}
         loaded={particlesLoaded}
         options={{
-          background: {image:'url(/images/about_bg_1.gif)',opacity:0.1,repeat:"no-repeat",size:"2000px"},
+          background: { color: { value: "#020617" } },
           fpsLimit: 60,
           interactivity: {
             events: {
