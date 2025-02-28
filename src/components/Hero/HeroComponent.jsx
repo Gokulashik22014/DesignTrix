@@ -52,25 +52,37 @@ const HeroComponent = () => {
     console.log(container);
   }, []);
   return (
-    <div className="flex h-screen w-full flex-col justify-center items-center">
+    <div className="flex h-screen w-full flex-col items-center">
       {/* <audio id="audio" src="/song/theme.mp3" preload="auto" ref={}/> */}
-      <div className="flex flex-row w-1/2 justify-around items-center z-10 absolute top-10">
+      <div className="flex items-center absolute z-10 top-20">
         <div className="w-24 h-24 object-cover">
           <img src="/images/clg_logo.png" alt="" srcset="" />
         </div>
-        <motion.h1 style={{color:textColor}} className="text-5xl font-extrabold">R.M.K. Engineering College</motion.h1>
+        
+          
+            <motion.h1 style={{color:textColor}} className="text-5xl font-extrabold uppercase">R.M.K. Engineering College</motion.h1>
+          
       </div>
+      
       <div className="flex h-screen w-full flex-col justify-center items-center">
         <motion.div
-          className="h-screen relative w-full z-10 px-24 flex justify-center items-center"
+          className="h-screen relative w-full z-10 px-24 flex flex-col justify-center items-center"
           style={{ backgroundImage }}
         >
-          <div className="text-8xl text-white relative z-10 title text-center lg:flex lg:justify-center lg:items-center">
-            <Text />
+          <div className="flex flex-col">
+            
+            <div className="text-8xl text-white relative z-10 title text-center lg:flex lg:flex-col lg:justify-center lg:items-center">
+            <motion.h1 style={{color:textColor}} className="text-4xl font-extrabold uppercase">Department of Computer Science and Design</motion.h1>
+            <motion.h1 style={{color:textColor}} className="text-3xl font-extrabold">Proudly presents</motion.h1>
+              <Text/>
+            </div>
           </div>
-          <div className="flex flex-col mt-72 w-full justify-center items-center space-y-7">
-            <div className="w-full flex justify-center">
+          <div className="flex flex-col w-full justify-center items-center gap-2 mt-96">
+            <div className="w-full flex flex-col justify-center">
+              <div className="flex flex-col justify-center items-center gap-2">
+            <motion.h1 style={{color:textColor}} className="text-3xl font-extrabold">A National Level Symposium</motion.h1>
               <ShiftingCountdown border={border} boxShadow={boxShadow} />
+              </div>
             </div>
             <motion.button
               style={{
