@@ -119,9 +119,9 @@ Players guess the movie or song based on a sequence of images revealed over time
       "RESULTS: The final results are determined solely by the organizers.",
     ],
     bgLeftGrad:
-      "bg-gradient-to-r from-yellow-500/70 via-amber-500/50 to-transparent",
+      "bg-gradient-to-r from-[#0e263c] via-[#a5021f] to-[#581826]",
     bgRightGrad:
-      "bg-gradient-to-l from-yellow-500/50 via-amber-500/30 to-transparent",
+      "bg-gradient-to-r from-[#0e263c] via-[#a5021f] to-[#581826]",
   },
 ];
 
