@@ -18,7 +18,7 @@ export const navbarLinks = [
 ];
 
 export const description ={
-  intro:"The Department of Computer Science and Design of R.M.K. Engineering College proudly presents ",
+  intro:"The Department of Computer Science and Design proudly presents ",
   content:"Designtrix 2025, a National Level Symposium featuring five engaging events categorized into technical and non-technical competitions. This event provides students with an excellent opportunity to showcase their skills, explore innovative ideas, and engage in healthy competition. With a perfect blend of creativity and technology, Designtrix 2025 promises an exciting and enriching experience for all participants."
 };
 export const aboutCollege = {

@@ -64,35 +64,50 @@ const Home = ({ handleHover }) => {
         style={{ backgroundImage }}
         className="flex flex-col max-sm:flex-wrap items-center h-screen px-4 pt-16"
       >
-        <div className="flex flex-row w-1/2 justify-start items-center max-sm:hidden">
-          <div className="w-24 h-24 object-cover">
-            <img src="/images/clg_logo.png" alt="" srcset="" />
-          </div>
-          <motion.h1
-            style={{ color: textColor }}
-            className="text-5xl font-extrabold"
-          >
-            R.M.K. Engineering College
-          </motion.h1>
-        </div>
-        <div className="flex flex-row max-sm:flex-wrap space-x-4 justify-around items-center h-screen">
-          <div className="flex flex-col gap-6 lg:max-h-1/2 lg:h-1/2">
-            <div {...handleHover}>
-              <SplitText
-                text="DesignTrix 2025"
-                className="text-4xl max-sm:hidden md:text-6xl lg:text-7xl font-bold text-white"
-              />
-              <h1 className="lg:hidden text-4xl text-white font-bold mt-4">
-                DesignTrix 2025
-              </h1>
+        <div className="flex flex-col w-1/2 space-y-12 justify-start items-center max-sm:hidden">
+          <div className="flex flex-row justify-start items-center max-sm:hidden">
+            <div className="w-24 h-24 object-cover">
+              <img src="/images/clg_logo.png" alt="" srcset="" />
             </div>
-            <div className="max-w-[520px]">
+            <motion.h1
+              style={{ color: textColor }}
+              className="text-5xl font-extrabold roboto-serif-main"
+            >
+              R.M.K. Engineering College
+            </motion.h1>
+          </div>
+          <div className="text-center">
+            <motion.h1
+            initial={{
+              opacity:0,
+              scale:0.5,
+            }}
+            whileInView={{
+              opacity:1,
+              scale:1,
+            }}
+            transition={{
+              duration:0.5,
+              ease:"easeIn"
+            }}
+              className="text-2xl font-bold text-white/70"
+            >
+             <h1 className="uppercase">Department of Computer Science and Design</h1>
+             <h1 className="text-xm font-semibold">Produly Presents</h1>
+            </motion.h1>
+          </div>
+        </div>
+        <div className="flex flex-row max-sm:flex-wrap space-x-4 w-full justify-center items-center h-screen">
+          <div className="flex flex-col justify-center items-center gap-6 lg:max-h-1/2 lg:h-1/2">
+            <div {...handleHover}>
+              <motion.h1 style={{color:textColor}} className="text-4xl max-sm:hidden md:text-6xl lg:text-7xl font-bold text-white">
+                DesignTrix 2025
+              </motion.h1>
+            </div>
+            <div className="max-w-[720px]">
               <p className="text-wrap text-gray-300 pl-2 text-sm sm:text-md text-justify">
                 {/* Check for window width and conditionally display intro */}
-                <span className="text-lg text-white">
-                  {description.intro}
-                </span>
-                <span className="text-justify w-full">
+                <span className="text-justify w-full text-[17px]">
                   {description.content}
                 </span>
               </p>
@@ -107,9 +122,7 @@ const Home = ({ handleHover }) => {
               </button>
             </div>
           </div>
-          <div className="hidden sm:flex h-1/2 max-h-1/2">
-            <CuteAnimal />
-          </div>
+          {/* exist on phone */}
           <div className="flex flex-col sm:hidden w-full pr-5 justify-center">
             <ShiftingCountdown border={border} boxShadow={boxShadow} />
             <div className="flex justify-center py-3">
