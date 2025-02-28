@@ -35,18 +35,17 @@ export const events = [
     bigImg: "/images/poster/coding.jpg",
     smallImg: "/images/logo/coding.jpg",
     rules: [
-      `Round 1: Algorithm Arena (45 mins)
-🔹 Challenge: Solve 3 coding problems:  
-   - 1 Easy  
-   - 2 Medium  
-🔹 Goal: Submit correct and optimized solutions for all problems.  
-🔹 Twist: Each problem includes bonus challenges—complete them for extra points!  `,
-      `ROUND 2: Round 2: Debug & Hack (15 mins)
-🔹 Challenge:Debug and optimize a faulty code snippet.  
-🔹 Goal: Identify and fix all errors to improve efficiency.  
-🔹 Twist: A hidden mystery bug is lurking—discover and fix it for bonus points!
-`,
-    ],
+      "Round 1: Algorithm Arena (45 mins)",
+  ` Challenge: Solve 3 coding problems:`, 
+     `- 1 Easy  
+     - 2 Medium `, 
+   `Goal: Submit correct and optimized solutions for all problems.  
+    Twist: Each problem includes bonus challenges—complete them for extra points!`,
+  "Round 2: Debug & Hack (15 mins)",
+  `Challenge: Debug and optimize a faulty code snippet.  
+  Goal: Identify and fix all errors to improve efficiency.  
+  Twist: A hidden mystery bug is lurking—discover and fix it for bonus points!`
+],
     bgLeftGrad:
       "bg-gradient-to-r from-orange-600/60 via-rose-500/40 to-transparent",
     bgRightGrad:
@@ -73,7 +72,7 @@ export const events = [
     name: "VisionaryVox Technical",
     desc: `Step into the spotlight and present your groundbreaking ideas in a high-impact 5-minute talk, followed by a dynamic 2-minute Q&A! This is your chance to challenge conventions, spark discussions, and showcase your innovative thinking. Engage with like-minded minds, defend your ideas, and leave a lasting impression! `,
     smallImg: "/images/logo/paper.png",
-    bigImg: "/images/poster/paper.jpg",
+    bigImg: "/images/poster/paper.png",
     rules: [
       "1 to 3 members per team can participate.",
       "Only Team leader can register with the Team name, Team members, Title and Abstract.",
@@ -82,9 +81,9 @@ export const events = [
       "Registration must be done before the deadline and on-spot registration is not available.",
     ],
     bgLeftGrad:
-      "bg-gradient-to-r from-green-600/60 via-teal-500/40 to-transparent",
+      "bg-gradient-to-r from-[#020239] via-[#5444af] to-[#130086]",
     bgRightGrad:
-      "bg-gradient-to-l from-green-600/40 via-teal-500/20 to-transparent",
+      "bg-gradient-to-r from-[#020239] via-[#5444af] to-[#130086]",
     imageModify: "",
   },
   {
@@ -110,7 +109,7 @@ export const events = [
     desc: `
 Players guess the movie or song based on a sequence of images revealed over time. Early images are vague, while later ones give clearer hints. Players can guess anytime—earlier correct guesses earn more points. If no one guesses correctly, the answer is revealed.`,
     smallImg: "/images/logo/connection.jpg",
-    bigImg: "/images/poster/connection.gif",
+    bigImg: "/images/poster/connection.jpg",
     rules: [
       "TEAM & ROUNDS: Teams consist of 1 to 4 members, competing in 3 rounds with a minimum of 5 questions each.",
       "SCORING: Each correct answer earns 5 points, while every incorrect answer deducts 2 points.",
@@ -164,3 +163,4 @@ export const prizes = {
 };
 
 export const regLink = "https://forms.gle/8DBPu919xZab1DeHA";
+export const instaLink="https://www.instagram.com/designtrix25/";

@@ -4,7 +4,7 @@ import {
   FaPhone,
   FaMapMarkerAlt,
 } from "react-icons/fa";
-import { contact } from "../data";
+import { contact, instaLink } from "../data";
 
 const ContactUs = ({ handleHover }) => {
   return (
@@ -30,8 +30,7 @@ const ContactUs = ({ handleHover }) => {
             Let's Connect
           </h1>
           <p className="text-gray-400 text-lg">
-            Have any question? Feel free to reach out to
-            us. We're here to help!
+            Have any question? Feel free to reach out to us. We're here to help!
           </p>
 
           {/* Contact Information */}
@@ -42,7 +41,7 @@ const ContactUs = ({ handleHover }) => {
                 <p className="text-gray-400">Email Us</p>
                 <a
                   href={`mailto:${contact.email}`}
-                  className="text-lg font-medium hover:text-yellow-400 transition-colors"
+                  className="text-lg font-medium hover:text-pink-400 transition-colors"
                   {...handleHover}
                 >
                   {contact.email}
@@ -64,23 +63,29 @@ const ContactUs = ({ handleHover }) => {
               <FaMapMarkerAlt className="text-yellow-500 text-2xl" />
               <div>
                 <p className="text-gray-400">Visit Us</p>
-                <p className="text-lg font-medium">
-                  {contact.loc}
-                </p>
+                <p className="text-lg font-medium">{contact.loc}</p>
               </div>
             </div>
           </div>
 
           {/* Social Media Links */}
-          <div className="flex space-x-6">
+          <div className="flex items-center space-x-4">
             <a
               {...handleHover}
-              href="https://instagram.com"
+              href={instaLink}
               target="_blank"
               rel="noopener noreferrer"
               className="text-pink-500 text-3xl hover:scale-110 transition-transform"
             >
               <FaInstagram />
+            </a>
+            <a
+              {...handleHover}
+              href={instaLink}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <p className="text-lg font-medium hover:text-pink-400">DesignTrix'25</p>
             </a>
           </div>
         </div>

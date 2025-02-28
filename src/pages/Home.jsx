@@ -64,7 +64,7 @@ const Home = ({ handleHover }) => {
         style={{ backgroundImage }}
         className="flex flex-col max-sm:flex-wrap items-center h-screen px-4 pt-16"
       >
-        <div className="flex flex-col w-1/2 space-y-12 justify-start items-center max-sm:hidden">
+        <div className="flex flex-col w-1/2 space-y-24 justify-start items-center max-sm:hidden">
           <div className="flex flex-row justify-start items-center max-sm:hidden">
             <div className="w-24 h-24 object-cover">
               <img src="/images/clg_logo.png" alt="" srcset="" />
@@ -92,8 +92,8 @@ const Home = ({ handleHover }) => {
             }}
               className="text-2xl font-bold text-white/70"
             >
-             <h1 className="uppercase">Department of Computer Science and Design</h1>
-             <h1 className="text-xm font-semibold">Produly Presents</h1>
+             <h1 className="uppercase text-3xl">Department of Computer Science and Design</h1>
+             <h1 className="font-semibold mt-6">Produly Presents</h1>
             </motion.h1>
           </div>
         </div>
