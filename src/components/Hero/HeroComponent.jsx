@@ -60,7 +60,7 @@ const HeroComponent = () => {
         </div>
         
           
-            <motion.h1 style={{color:textColor}} className="text-5xl font-extrabold uppercase">R.M.K. Engineering College</motion.h1>
+            <motion.h1 style={{color:textColor}} className="text-5xl font-extrabold uppercase roboto-serif-main">R.M.K. Engineering College</motion.h1>
           
       </div>
       
