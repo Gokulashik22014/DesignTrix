@@ -89,7 +89,7 @@ export const events = [
   {
     name: "SquidBid Non-Technical",
     desc: `Get ready for the ultimate cricketing showdown at our IPL Auction event! Test your strategy, budget management, and cricket knowledge as you bid for top players to build your dream team. Compete against rival owners, make smart picks, and create the ultimate squad.`,
-    smallImg: "/images/poster/ipl.png",
+    smallImg: "/images/poster/ipl.jpg",
     bigImg: "/images/logo/ipl.jpg",
     rules: [
       "TEAM: 11 players (1 WK, 2 AR, 3 BAT, 3 BOWL).",
